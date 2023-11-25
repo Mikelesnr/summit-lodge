@@ -5,7 +5,7 @@ import Banner from "@components/Banner";
 const Book = () => {
   return (
     <>
-      <Hero hero="roomsHero">
+      <Hero hero="bookHero">
         <Banner title="Book A Room">
           <Link href="/" className="btn-primary">
             Book

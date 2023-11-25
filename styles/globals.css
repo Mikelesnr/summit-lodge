@@ -196,16 +196,28 @@ h6 {
 /* Hero */
 
 .defaultHero,
-.roomsHero {
+.roomsHero,
+.bookHero,
+.contactHero {
   min-height: calc(100vh - 66px);
-  background: url("../assets/images/defaultBcg.jpeg") center/cover no-repeat;
+  background: url("../assets/images/home-bg.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .roomsHero {
-  background-image: url("../assets/images/room-2.jpeg");
+  background-image: url("../assets/images/rooms-bg.jpeg");
+  min-height: 60vh;
+}
+
+.bookHero {
+  background-image: url("../assets/images/book-bg.jpeg");
+  min-height: 60vh;
+}
+
+.contactHero {
+  background-image: url("../assets/images/contact-bg.jpeg");
   min-height: 60vh;
 }
 
@@ -215,7 +227,7 @@ h6 {
 
 .banner {
   display: inline-block;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.521);
   color: var(--mainWhite);
   padding: 2rem 1rem;
   text-align: center;

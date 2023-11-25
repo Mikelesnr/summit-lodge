@@ -5,7 +5,7 @@ import Banner from "@components/Banner";
 const Contacts = () => {
   return (
     <>
-      <Hero hero="roomsHero">
+      <Hero hero="contactHero">
         <Banner title="Contact Us">
           <Link href="/" className="btn-primary">
             Contact
