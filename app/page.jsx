@@ -12,7 +12,7 @@ export default function Home({ children }) {
         <Banner
           title={
             <Image
-              src="/summit-guesthouse-home-logo.png"
+              src="/summit.png"
               alt="Summit Logo"
               width={330}
               height={80}

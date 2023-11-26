@@ -199,7 +199,7 @@ h6 {
 .roomsHero,
 .bookHero,
 .contactHero {
-  min-height: calc(100vh - 66px);
+  min-height: calc(80vh - 66px);
   background: url("../assets/images/home-bg.jpeg") center/cover no-repeat;
   display: flex;
   align-items: center;

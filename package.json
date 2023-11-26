@@ -10,15 +10,16 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
-    "contentful": "^10.6.11",
+    "contentful": "^10.6.12",
     "mongod": "^2.0.0",
     "mongoose": "^8.0.0",
-    "react": "^18",
-    "react-dom": "^18",
     "next": "14.0.3",
     "next-auth": "^4.24.5",
     "prop-types": "^15.8.1",
-    "react-icons": "^4.11.0"
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^4.11.0",
+    "styled-components": "^5.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.0.1",
