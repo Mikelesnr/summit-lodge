@@ -1,7 +1,7 @@
 import Hero from "@components/Hero";
 import Link from "next/link";
 import Banner from "@components/Banner";
-// import RoomsContainer from "@components/RoomsContainer";
+import RoomsContainer from "@components/RoomsContainer";
 const Rooms = () => {
   return (
     <>
@@ -12,7 +12,7 @@ const Rooms = () => {
           </Link>
         </Banner>
       </Hero>
-      {/* <RoomsContainer></RoomsContainer> */}
+      <RoomsContainer></RoomsContainer>
     </>
   );
 };

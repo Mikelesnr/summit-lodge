@@ -3,7 +3,7 @@ import Banner from "@components/Banner";
 import Link from "next/link";
 import Image from "next/image";
 import Services from "@components/Services";
-// import Featured from "@components/FeaturedRooms";
+import Featured from "@components/FeaturedRooms";
 
 export default function Home({ children }) {
   return (
@@ -27,7 +27,7 @@ export default function Home({ children }) {
         </Banner>
       </Hero>
       <Services></Services>
-      {/* <Featured /> */}
+      <Featured />
     </div>
   );
 }

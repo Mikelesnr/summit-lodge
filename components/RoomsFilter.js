@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { RoomContext } from "../context";
+import { RoomContext } from "@assets/context";
 import Title from "./Title";
 
 //get all unique values

@@ -1,6 +1,7 @@
 import "@styles/globals.css";
 import NavBar from "@components/NavBar";
 import { children } from "react";
+import { RoomProvider } from "@assets/context";
 
 export const metadata = {
   title: "summit lodge",
@@ -14,11 +15,12 @@ const RootLayout = ({ children }) => {
         <div className="main">
           <div className="gradient" />
         </div>
-
-        <main className="app">
-          <NavBar />
-          {children}
-        </main>
+        <RoomProvider>
+          <main className="app">
+            <NavBar />
+            {children}
+          </main>
+        </RoomProvider>
       </body>
     </html>
   );

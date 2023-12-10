@@ -1,5 +1,5 @@
 "use client";
-import { withRoomConsumer } from "../context";
+import { withRoomConsumer } from "@assets/context";
 import Loading from "./Loading";
 import RoomsFilter from "./RoomsFilter";
 import RoomsList from "./RoomsList";

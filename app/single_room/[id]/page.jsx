@@ -1,31 +1,32 @@
 "use client";
 import React, { Component } from "react";
-import defaultBcg from "@assets/images/room-1.jpeg";
+import defaultBcg from "@assets/images/signature/signature-wide.jpeg";
 import Banner from "@components/Banner";
 import Link from "next/link";
+import Image from "next/image";
 import { RoomContext } from "@assets/context";
-// import StyledHero from "@components/StyledHero";
 import Hero from "@components/Hero";
+// import StyledHero from "@components/StyledHero";
 export default class SingleRoom extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props);
-    // this.state = {
-    //   slug: this.props.match.params.slug,
-    //   defaultBcg: defaultBcg,
-    // };
+    this.state = {
+      slug: this.props.params.id,
+      defaultBcg: defaultBcg,
+    };
   }
   static contextType = RoomContext;
   render() {
-    // const { getRoom } = this.context;
-    // const room = getRoom(this.state.slug);
-    const room = true;
+    const { getRoom } = this.context;
+    console.log(typeof this.state.slug);
+    const room = getRoom(this.state.slug);
+    // const room = true;
 
     if (!room) {
       return (
         <div className="error">
           <h3> no such room could be found...</h3>
-          <Link to="/rooms" className="btn-primary">
+          <Link href="/rooms" className="btn-primary">
             back to rooms
           </Link>
         </div>
@@ -49,7 +50,7 @@ export default class SingleRoom extends Component {
         {/* <StyledHero img={images[0] || this.state.defaultBcg}> */}
         <Hero>
           <Banner title={`${name} room`}>
-            <Link to="/rooms" className="btn-primary">
+            <Link href="/rooms" className="btn-primary">
               Back to rooms
             </Link>
           </Banner>
@@ -58,7 +59,7 @@ export default class SingleRoom extends Component {
         <section className="single-room">
           <div className="single-room-images">
             {images.map((image, index) => {
-              return <img key={index} src={image} alt={name} />;
+              return <Image key={index} src={image} alt={name} />;
             })}
           </div>
           <div className="single-room-info">
