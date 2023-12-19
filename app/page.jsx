@@ -19,7 +19,7 @@ export default function Home({ children }) {
               className="object-contain"
             />
           }
-          subtitle="deluxe rooms starting at $299 "
+          subtitle="deluxe rooms starting at $50 "
         >
           <Link href="/rooms" className="btn-primary">
             Our rooms

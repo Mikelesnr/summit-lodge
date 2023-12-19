@@ -9,22 +9,22 @@ export default class Services extends Component {
       {
         icon: <FaMugHot />,
         title: "Breakfast",
-        info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ut iste aperiam. Ipsam reprehenderit reiciendis",
+        info: "Access to dining services for all meals and room service as an option. ",
       },
       {
         icon: <FaSatellite />,
         title: "Dstv ",
-        info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ut iste aperiam. Ipsam reprehenderit reiciendis",
+        info: "Full bouquet Dstv, all channels available for your viewing pleasure. ",
       },
       {
         icon: <FaFan />,
         title: "Air Conditioning",
-        info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ut iste aperiam. Ipsam reprehenderit reiciendis",
+        info: "All rooms are airconditioned tom make your environment as comfortable as possible. ",
       },
       {
         icon: <FaWifi />,
         title: "Wifi",
-        info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ut iste aperiam. Ipsam reprehenderit reiciendis",
+        info: "All rooms have highspeed fiber optic Wi-Fi so you can keep up with your work and social life. ",
       },
     ],
   };
