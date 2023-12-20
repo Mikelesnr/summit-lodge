@@ -33,25 +33,34 @@ const Footer = () => {
             </div>
             <div>
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-                Contact Us
+                Contact Details
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a
-                    href="tel:+2638677123456"
+                    href="tel:+263780652983"
                     className="hover:underline"
                     target="_blank"
                   >
-                    +263 86 77 123 456
+                    +263 780 652 983
                   </a>
                 </li>
                 <li className="mb-4">
                   <a
-                    href="mailto:summitguesthouse@gmail.com"
+                    href="tel:+263718267984"
                     className="hover:underline"
                     target="_blank"
                   >
-                    summitguesthouse@gmail.com
+                    +263 718 267 984
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a
+                    href="mailto:summitguestlodge@gmail.com"
+                    className="hover:underline"
+                    target="_blank"
+                  >
+                    summitguestlodge@gmail.com
                   </a>
                 </li>
                 <li className="mb-4">
@@ -61,11 +70,6 @@ const Footer = () => {
                     target="_blank"
                   >
                     Facebook
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a href="/contacts" className="hover:underline">
-                    Direct Message
                   </a>
                 </li>
               </ul>
@@ -88,6 +92,11 @@ const Footer = () => {
                 <li className="mb-4">
                   <a href="/book" className="hover:underline">
                     Book
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a href="/contacts" className="hover:underline">
+                    Contact Us
                   </a>
                 </li>
               </ul>

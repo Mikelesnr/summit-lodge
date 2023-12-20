@@ -641,6 +641,19 @@ h6 {
 
 /* end of rooms fitler*/
 
+/* start contact form */
+.btn-form {
+  background-color: #af9a7d;
+}
+
+.form-input,
+.form-label {
+  color: #222 !important;
+  border: #222 !important;
+  border-width: 1px !important;
+}
+/* end of contact form */
+
 /* start of footer */
 /* CSS */
 .footer {
