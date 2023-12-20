@@ -640,3 +640,45 @@ h6 {
 }
 
 /* end of rooms fitler*/
+
+/* start of footer */
+/* CSS */
+.footer {
+  background-color: #af9a7d;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.footer h4 {
+  font-weight: bold;
+  color: #333333;
+}
+
+.footer a {
+  color: #333333;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #666666;
+  text-decoration: underline;
+}
+
+.footer p {
+  font-size: 14px;
+  color: #333333;
+}
+
+.footer .location {
+  font-weight: bold;
+}
+
+.footer .contact {
+  font-style: italic;
+}
+
+.footer .copy {
+  text-align: center;
+}
+
+/* end of footer */

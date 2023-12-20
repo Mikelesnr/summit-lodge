@@ -1,5 +1,6 @@
 import "@styles/globals.css";
 import NavBar from "@components/NavBar";
+import Footer from "@components/footer";
 import { children } from "react";
 import { RoomProvider } from "@assets/context";
 
@@ -19,6 +20,7 @@ const RootLayout = ({ children }) => {
           <main className="app">
             <NavBar />
             {children}
+            <Footer />
           </main>
         </RoomProvider>
       </body>
