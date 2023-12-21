@@ -697,6 +697,11 @@ h6 {
 /* end of footer */
 
 /* start map */
+.map-head {
+  margin: 30px auto;
+  text-align: center;
+}
+
 .map-div {
   width: 90%;
   margin: 10px auto;

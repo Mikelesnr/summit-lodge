@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const Footer = () => {
   return (
     <div>
@@ -12,12 +10,12 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className=" hover:underline">
+                  <a href="/location" className=" hover:underline">
                     687 Baobab Road
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="/location" className="hover:underline">
                     Beitbridge
                   </a>
                 </li>
@@ -27,16 +25,9 @@ const Footer = () => {
                   </a>
                 </li> */}
                 <li className="mb-4">
-                  <Link href="/book/map" className="mb-4">
+                  <a href="/location" className="hover:underline">
                     Location
-                  </Link>
-                  {/* <a
-                    href=""
-                    onClick={{this.handleScroll.bind(this, "map")}}
-                    className="hover:underline"
-                  >
-                    Location
-                  </a> */}
+                  </a>
                 </li>
               </ul>
             </div>
@@ -126,8 +117,8 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    Location
+                  <a href="/location" className="hover:underline">
+                    map location
                   </a>
                 </li>
                 {/* <li className="mb-4">
