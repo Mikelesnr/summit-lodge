@@ -8,8 +8,8 @@ const Contacts = () => {
     <>
       <Hero hero="contactHero">
         <Banner title="Contact Us">
-          <Link href="/" className="btn-primary">
-            Contact
+          <Link href="/rooms" className="btn-primary">
+            Check Out Our Rooms
           </Link>
         </Banner>
       </Hero>

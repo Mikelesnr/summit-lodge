@@ -8,8 +8,8 @@ const Location = () => {
     <>
       <Hero hero="bookHero">
         <Banner title="Get Directions">
-          <Link href="/" className="btn-primary">
-            location
+          <Link href="/rooms" className="btn-primary">
+            Check Out Our Rooms
           </Link>
         </Banner>
       </Hero>
