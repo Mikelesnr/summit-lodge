@@ -1,8 +1,10 @@
 import Hero from "@components/Hero";
+import Amenities from "@components/amenities";
 import Banner from "@components/Banner";
 import Link from "next/link";
 import Image from "next/image";
 import Services from "@components/Services";
+import Reviews from "@components/reviews";
 import Featured from "@components/FeaturedRooms";
 
 export default function Home({ children }) {
@@ -28,6 +30,18 @@ export default function Home({ children }) {
       </Hero>
       <Services></Services>
       <Featured />
+      <Hero hero="bookHero">
+        <Banner
+          title="Book A Room"
+          subtitle="Plan an Unforgettable Experience in Summit Guesthouse today "
+        >
+          <Link href="/book" className="btn-primary">
+            Book
+          </Link>
+        </Banner>
+      </Hero>
+      <Amenities />
+      <Reviews />
     </div>
   );
 }
