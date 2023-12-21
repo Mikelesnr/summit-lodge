@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Footer = () => {
   return (
     <div>
@@ -25,9 +27,16 @@ const Footer = () => {
                   </a>
                 </li> */}
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <Link href="/book/map" className="mb-4">
                     Location
-                  </a>
+                  </Link>
+                  {/* <a
+                    href=""
+                    onClick={{this.handleScroll.bind(this, "map")}}
+                    className="hover:underline"
+                  >
+                    Location
+                  </a> */}
                 </li>
               </ul>
             </div>

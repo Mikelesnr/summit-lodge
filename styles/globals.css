@@ -695,3 +695,22 @@ h6 {
 }
 
 /* end of footer */
+
+/* start map */
+.map-div {
+  width: 90%;
+  margin: 10px auto;
+}
+
+.map {
+  align-self: center;
+  width: 100%;
+  height: 600px;
+}
+
+@media only screen and (max-width: 600px) {
+  .map {
+    height: 300px;
+  }
+}
+/* end map */
