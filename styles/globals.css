@@ -107,6 +107,10 @@ h6 {
   letter-spacing: var(--mainSpacing);
 }
 
+.mb-custom {
+  margin-bottom: 100px !important;
+}
+
 /* end of globals */
 
 /* Navbar */
@@ -356,15 +360,15 @@ h6 {
   width: 80vw;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   grid-row-gap: 2rem;
-  grid-column-gap: 40px;
+  grid-column-gap: 30px;
 }
 
 @media screen and (min-width: 776px) {
   .featured-rooms-center {
     width: 90vw;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   }
 }
 
@@ -559,6 +563,7 @@ h6 {
 @media screen and (min-width: 776px) {
   .roomslist-center {
     width: 90vw;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   }
 }
 
@@ -726,3 +731,22 @@ h6 {
 }
 
 /* end map */
+
+/* start reviews */
+.reviews {
+  width: 90%;
+  margin: 50px auto;
+}
+
+.bg-custom {
+  background-color: #af9a7d;
+  height: 400px;
+}
+
+@media only screen and (min-width: 600px) {
+  .reviews {
+    width: 80%;
+    margin: 30px auto;
+  }
+}
+/* end reviews */

@@ -1,10 +1,12 @@
 import React from "react";
+import Title from "./Title";
 
 export default function BookingForm() {
   return (
     <div>
       <div className="flex items-center justify-center p-12">
         <div className="mx-auto w-full max-w-[550px]">
+          <Title title="Book Room" />
           <form action="https://formbold.com/s/FORM_ID" method="POST">
             <div className="-mx-3 flex flex-wrap">
               <div className="w-full px-3 sm:w-1/2">

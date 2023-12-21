@@ -1,3 +1,5 @@
+import Title from "./Title";
+
 const ContactForm = () => {
   return (
     <div>
@@ -5,7 +7,7 @@ const ContactForm = () => {
         {/* Section: Design Block */}
         <section className="mb-32 text-center">
           <div className="mx-auto max-w-[700px] md:px-3">
-            <h2 className="mb-12 text-3xl font-bold">Contact us</h2>
+            <Title title="Contact Us" />
             <form>
               <label
                 for="name-icon"
