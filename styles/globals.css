@@ -713,9 +713,16 @@ h6 {
   height: 600px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .map {
+    height: 450px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .map {
     height: 300px;
   }
 }
+
 /* end map */
