@@ -19,7 +19,7 @@ export default class Services extends Component {
       {
         icon: <FaFan />,
         title: "Air Conditioning",
-        info: "All rooms are airconditioned tom make your environment as comfortable as possible. ",
+        info: "All rooms are airconditioned to make your environment as comfortable as possible. ",
       },
       {
         icon: <FaWifi />,
