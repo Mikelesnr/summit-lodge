@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Title from "./Title";
 import MikeAvatar from "@assets/images/review-pics/ngoni.jpeg";
+import TinashAvatar from "@assets/images/review-pics/tinashe.jpg";
 
 export default function Reviews() {
   return (
@@ -21,10 +22,10 @@ export default function Reviews() {
               <div class="h-28 overflow-hidden rounded-t-lg bg-[#9d789b]"></div>
               <div class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
                 <Image
-                  src="/summit.png"
+                  src={TinashAvatar}
                   alt="Summit Logo"
-                  width={330}
-                  height={80}
+                  width={"fill"}
+                  height={"fill"}
                   className="object-contain"
                 />
               </div>
