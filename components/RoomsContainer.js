@@ -1,7 +1,7 @@
 "use client";
 import { withRoomConsumer } from "@assets/context";
 import Loading from "./Loading";
-import RoomsFilter from "./RoomsFilter";
+import Title from "./Title";
 import RoomsList from "./RoomsList";
 
 function RoomContainer({ context }) {
@@ -11,8 +11,10 @@ function RoomContainer({ context }) {
   }
   return (
     <>
-      <RoomsFilter rooms={rooms} />
-      <RoomsList rooms={sortedRooms} />
+      <section className="filter-container">
+        <Title title="Rooms"></Title>
+        <RoomsList rooms={sortedRooms} />
+      </section>
     </>
   );
 }
