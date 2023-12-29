@@ -7,7 +7,7 @@ import Services from "../components/Services";
 import Reviews from "../components/reviews";
 import Featured from "../components/FeaturedRooms";
 
-export default function Home({ children }) {
+export default function Home() {
   return (
     <div>
       <Hero>
