@@ -1,11 +1,11 @@
 "use client";
 import React, { Component } from "react";
-import defaultBcg from "@assets/images/signature/signature-wide.jpeg";
-import Banner from "@components/Banner";
+import defaultBcg from "../../../assets/images/signature/signature-wide.jpeg";
+import Banner from "../../../components/Banner";
 import Link from "next/link";
 import Image from "next/image";
-import { RoomContext } from "@assets/context";
-import Hero from "@components/Hero";
+import { RoomContext } from "../../../assets/context";
+import Hero from "../../../../components/Hero";
 // import StyledHero from "@components/StyledHero";
 export default class SingleRoom extends Component {
   constructor(props) {

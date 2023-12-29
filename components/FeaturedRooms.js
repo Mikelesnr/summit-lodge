@@ -1,6 +1,6 @@
 "use client";
 import React, { Component } from "react";
-import { RoomContext } from "@assets/context";
+import { RoomContext } from "../assets/context";
 import Loading from "./Loading";
 import Room from "./Room";
 import Title from "./Title";

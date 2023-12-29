@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { FaAlignRight } from "react-icons/fa";
-import logo from "@assets/images/logo.svg";
+import logo from "../assets/images/logo.svg";
 import Link from "next/link";
 import Image from "next/image";
 import { signIn, signOut, useSession, getProviders } from "next-auth/react";
