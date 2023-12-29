@@ -1,7 +1,7 @@
 import { sendMail } from "../../../lib/mail";
 import { NextResponse } from "next/server";
 
-export async function POST(request: Request) {
+export async function POST(request) {
   let form = await request.json();
   await sendMail({
     from: form.email,
