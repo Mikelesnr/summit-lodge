@@ -1,8 +1,8 @@
-import "@styles/globals.css";
-import NavBar from "@components/NavBar";
-import Footer from "@components/footer";
+import "../styles/globals.css";
+import NavBar from "../components/NavBar";
+import Footer from "../components/footer";
 import { children } from "react";
-import { RoomProvider } from "@assets/context";
+import { RoomProvider } from "../assets/context";
 
 export const metadata = {
   title: "summit lodge",

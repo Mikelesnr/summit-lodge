@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import Title from "./Title";
-import MikeAvatar from "@assets/images/review-pics/ngoni.jpeg";
-import TinashAvatar from "@assets/images/review-pics/tinashe.jpg";
+import MikeAvatar from "../assets/images/review-pics/ngoni.jpeg";
+import TinashAvatar from "../assets/images/review-pics/tinashe.jpg";
 
 export default function Reviews() {
   return (

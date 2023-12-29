@@ -1,6 +1,6 @@
 "use client";
 import React, { Component, createContext } from "react";
-import items from "@assets/data";
+import items from "./data";
 // import Client from "./Contentful";
 const RoomContext = createContext();
 class RoomProvider extends Component {

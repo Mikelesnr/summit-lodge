@@ -1,10 +1,10 @@
 import React from "react";
-import Amenities1 from "@assets/images/amenities/amenities1.jpeg";
-import Amenities2 from "@assets/images/amenities/amenities-front.jpeg";
-import Amenities3 from "@assets/images/amenities/amenities-dining.jpeg";
-import Amenities4 from "@assets/images/amenities/amenities-parking.jpeg";
-import Amenities5 from "@assets/images/amenities/amenities-sofa.jpeg";
-import Amenities6 from "@assets/images/amenities/amenities-garden2.jpeg";
+import Amenities1 from "../assets/images/amenities/amenities1.jpeg";
+import Amenities2 from "../assets/images/amenities/amenities-front.jpeg";
+import Amenities3 from "../assets/images/amenities/amenities-dining.jpeg";
+import Amenities4 from "../assets/images/amenities/amenities-parking.jpeg";
+import Amenities5 from "../assets/images/amenities/amenities-sofa.jpeg";
+import Amenities6 from "../assets/images/amenities/amenities-garden2.jpeg";
 import Image from "next/image";
 import Title from "./Title";
 

@@ -1,4 +1,4 @@
-import defaultImg from "@assets/images/signature/signature-wide.jpeg";
+import defaultImg from "../assets/images/signature/signature-wide.jpeg";
 import PropTypes from "prop-types";
 import Image from "next/image";
 import Link from "next/link";

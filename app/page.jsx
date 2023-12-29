@@ -1,11 +1,11 @@
-import Hero from "@components/Hero";
-import Amenities from "@components/amenities";
-import Banner from "@components/Banner";
+import Hero from "../components/Hero";
+import Amenities from "../components/amenities";
+import Banner from "../components/Banner";
 import Link from "next/link";
 import Image from "next/image";
-import Services from "@components/Services";
-import Reviews from "@components/reviews";
-import Featured from "@components/FeaturedRooms";
+import Services from "../components/Services";
+import Reviews from "../components/reviews";
+import Featured from "../components/FeaturedRooms";
 
 export default function Home({ children }) {
   return (
