@@ -5,7 +5,7 @@ import Banner from "../../../components/Banner";
 import Link from "next/link";
 import Image from "next/image";
 import { RoomContext } from "../../../assets/context";
-import Hero from "../../../../components/Hero";
+import Hero from "../../../components/Hero";
 // import StyledHero from "@components/StyledHero";
 export default class SingleRoom extends Component {
   constructor(props) {
