@@ -17,6 +17,7 @@
     "next": "14.0.3",
     "next-auth": "^4.24.5",
     "nodemailer": "^6.8.0",
+    "prisma": "^5.9.1",
     "prop-types": "^15.8.1",
     "react": "^18",
     "react-dom": "^18",
