@@ -1,14 +1,6 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-=======
     "lib": ["dom", "dom.iterable", "esnext"],
->>>>>>> main
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -30,17 +22,9 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-<<<<<<< HEAD
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
-=======
     "**/*.tsx",
     "app/api/checkdb/route.js",
     "app/api/mailer/route.js"
   ],
   "exclude": ["node_modules"]
->>>>>>> main
 }
