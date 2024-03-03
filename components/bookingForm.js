@@ -1,7 +1,8 @@
 "use client";
-import { React, useState } from "react";
+import React from "react";
 import Title from "./Title";
-import RoomsBooking from "./RoomsBooking";
+import { useState } from "react";
+import BookingRooms from "./BookingRooms";
 
 export default function BookingForm() {
   const [firstName, setFirstName] = useState("");
@@ -262,7 +263,7 @@ export default function BookingForm() {
           </form>
         </div>
       </div>
-      <RoomsBooking />
-    </div>
-  );
-}
+      </div>
+    );
+  }
+
