@@ -33,12 +33,19 @@ const ContactForm = () => {
     });
     result = await result.json();
     console.log(result.message);
+    setName("");
+    setSubject("");
+    setEmail("");
+    setMessage("");
   }
 
   return (
     <div className="flex items-center justify-center p-12">
       <div className="mx-auto w-full max-w-[550px]">
-        <form action="https://formbold.com/s/FORM_ID" method="POST">
+        <form
+          action="https://formbold.com/s/FORM_ID"
+          // onSubmit={sendForm.bind(this)}
+        >
           <Title title="Contact Us" />
           <div className="mb-5">
             <label
