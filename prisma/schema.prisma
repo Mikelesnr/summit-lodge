@@ -10,14 +10,14 @@ datasource db {
   url      = "file:./dev.db"
 }
 
-
 model Booking{
   id          String    @id @default(cuid()) @map("_id")
-  name        String
-  checkIn     String
-  checkOut    String
-  room        String
+  firstName   String
+  lastName    String
+  roomName    String
+  email       String
+  checkIn     DateTime
+  checkOut    DateTime
   createdAt   DateTime  @default(now()) @map("created_at")
   updatedAt   DateTime  @default(now()) @updatedAt @map("updated_at")
-  email      String    
 }
