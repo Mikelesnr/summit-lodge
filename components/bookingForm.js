@@ -2,7 +2,7 @@
 
 import { React, useState } from "react";
 import Title from "./Title";
-import BookingRooms from "./BookingRooms";
+import RoomsBooking from "./RoomsBooking";
 
 class BookingForm extends React.Component {
   // const booking = {};
@@ -264,7 +264,8 @@ class BookingForm extends React.Component {
         </div>
         {this.state.checkIn && this.state.checkOut ? <BookingRooms /> : <></>}
       </div>
-    );
-  }
+      <RoomsBooking />
+    </div>
+  );
 }
 export default BookingForm;
