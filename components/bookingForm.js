@@ -1,6 +1,7 @@
 "use client";
 import { React, useState } from "react";
 import Title from "./Title";
+import RoomsBooking from "./RoomsBooking";
 
 export default function BookingForm() {
   return (
@@ -204,6 +205,7 @@ export default function BookingForm() {
           </form>
         </div>
       </div>
+      <RoomsBooking />
     </div>
   );
 }
