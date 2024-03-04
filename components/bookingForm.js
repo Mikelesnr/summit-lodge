@@ -1,7 +1,7 @@
 "use client";
-import React from "react";
+
+import { React, useState } from "react";
 import Title from "./Title";
-import { useState } from "react";
 import BookingRooms from "./BookingRooms";
 
 class BookingForm extends React.Component {
