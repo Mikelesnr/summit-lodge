@@ -11,17 +11,13 @@ datasource db {
 }
 
 
-model Task{
+model Booking{
   id          String    @id @default(cuid()) @map("_id")
-  title       String
-  assigned    String
-  description String?
-  date        String
-  isCompleted Boolean   @default(false)
-  isImportant Boolean   @default(false)
-  attachment  Boolean   @default(false)
-
+  name        String
+  checkIn     String
+  checkOut    String
+  room        String
   createdAt   DateTime  @default(now()) @map("created_at")
   updatedAt   DateTime  @default(now()) @updatedAt @map("updated_at")
-  userId      String    
+  email      String    
 }
