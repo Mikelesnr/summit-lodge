@@ -33,6 +33,10 @@ const ContactForm = () => {
     });
     result = await result.json();
     console.log(result.message);
+    setName("");
+    setSubject("");
+    setEmail("");
+    setMessage("");
   }
 
   return (
