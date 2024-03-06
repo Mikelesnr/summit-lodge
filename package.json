@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@prisma/client": "^5.9.1",
+    "@types/formidable": "^3.4.5",
     "bcrypt": "^5.1.1",
     "client": "^0.0.1",
     "contentful": "^10.6.12",
