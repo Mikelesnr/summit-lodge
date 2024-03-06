@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/formidable": "^3.4.5",
     "bcrypt": "^5.1.1",
     "contentful": "^10.6.12",
+    "formidable": "^3.5.1",
     "mongod": "^2.0.0",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.0",
