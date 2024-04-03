@@ -12,7 +12,7 @@ function RoomsBooking({ context }) {
   return (
     <>
       <section className="filter-container">
-        <Title title="Rooms"></Title>
+        <Title title="Select Rooms"></Title>
         <BookingList rooms={sortedRooms} />
       </section>
     </>
