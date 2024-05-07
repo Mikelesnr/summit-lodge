@@ -1,23 +1,29 @@
 import defaultImg from "../assets/images/signature/signature-wide.jpeg";
 import PropTypes from "prop-types";
 import Image from "next/image";
-import Button from "react";
+import { useCartStore } from "../app/store/cart-store";
+
 export default function RoomBook({ room }) {
   const { name, slug, images, price } = room;
-  const cart = [];
-  const addToCart = (name, price) => {
-    cart.push({ room: name, price: price });
+  const removeFromCart = useCartStore((state) => state.removeFromCart);
+  const addToCart = useCartStore((state) => state.addToCart);
+  const cart = useCartStore((state) => state.cart);
+  const add = () => {
+    addToCart({ name, price });
     console.log(cart);
   };
+
   return (
     <article className="room">
       <div className="img-container">
-        <Image src={images[0] || defaultImg} alt="single room" />
+        cart <Image src={images[0] || defaultImg} alt="single room" />
         <div className="price-top">
           <h6>${price}</h6>
           <p>per night</p>
         </div>
-        <button className="btn-primary room-link">Select</button>
+        <button type="button" onClick={add} className="btn-primary room-link">
+          Add
+        </button>
       </div>
       <p className="room-info">{name}</p>
     </article>

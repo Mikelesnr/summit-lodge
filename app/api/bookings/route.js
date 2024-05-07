@@ -1,3 +1,4 @@
+import data from "../../../assets/data";
 import prisma from "../../utils/connect";
 import { NextResponse } from "next/server";
 
@@ -7,7 +8,6 @@ export async function POST(req) {
       await req.json();
 
     // checkIn = new Date(checkIn);
-
     const booking = await prisma.booking.create({
       data: {
         firstName,

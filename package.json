@@ -11,6 +11,7 @@
   "dependencies": {
     "@prisma/client": "^5.10.2",
     "@types/formidable": "^3.4.5",
+    "axios": "^1.6.8",
     "bcrypt": "^5.1.1",
     "client": "^0.0.1",
     "contentful": "^10.6.12",
@@ -27,7 +28,8 @@
     "react-dom": "^18",
     "react-icons": "^4.11.0",
     "react-iframe": "^1.8.5",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
     "@types/node": "20.11.19",
