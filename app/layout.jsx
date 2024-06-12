@@ -1,6 +1,8 @@
 import "../styles/globals.css";
 import NavBar from "../components/NavBar";
 import Footer from "../components/footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { RoomProvider } from "../assets/context";
 
 export const metadata = {
@@ -22,6 +24,7 @@ const RootLayout = ({ children }) => {
             <Footer />
           </main>
         </RoomProvider>
+        <ToastContainer />
       </body>
     </html>
   );

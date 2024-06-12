@@ -1,29 +1,36 @@
 import data from "../../../assets/data";
 import prisma from "../../utils/connect";
 import { NextResponse } from "next/server";
+import { convertDate } from "../../utils/convertDate";
 
 export async function POST(req) {
   try {
-    const { firstName, lastName, roomName, email, checkIn, checkOut } =
+    let { firstName, lastName, roomName, phone, email, checkIn, checkOut } =
       await req.json();
 
-    // checkIn = new Date(checkIn);
-    const booking = await prisma.booking.create({
-      data: {
-        firstName,
-        lastName,
-        roomName,
-        email,
-        checkIn,
-        checkOut,
-      },
+    checkIn = convertDate(checkIn);
+    checkOut = convertDate(checkOut);
+    const rooms = JSON.parse(roomName);
+
+    rooms.forEach(async function (room) {
+      roomName = room.name;
+      const booking = await prisma.booking.create({
+        data: {
+          firstName,
+          lastName,
+          roomName,
+          phone,
+          email,
+          checkIn,
+          checkOut,
+        },
+      });
     });
 
     return NextResponse.json(booking);
   } catch (error) {
-    console.log("ERROR CREATING BOOKING: ", error);
     return NextResponse.json({
-      error: "Error creating booking",
+      error: error,
       status: 500,
     });
   }

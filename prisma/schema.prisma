@@ -15,6 +15,7 @@ model Booking{
   firstName   String
   lastName    String
   roomName    String
+  phone       String
   email       String
   checkIn     DateTime
   checkOut    DateTime

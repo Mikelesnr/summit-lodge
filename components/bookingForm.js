@@ -1,34 +1,57 @@
 "use client";
 import React from "react";
 import Title from "./Title";
-import { useState } from "react";
 import RoomsBooking from "./RoomsBooking";
+import { toast } from "react-toastify";
 import { useCartStore } from "../app/store/cart-store";
+import { useBookingStore } from "../app/store/booking-store";
 
 const BookingForm = () => {
-  const [firstName, setFirstname] = useState("");
-  const [lastName, setLastname] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [numRooms, setNumRooms] = useState("");
-  const [numGuests, setNumGuests] = useState("");
-  const [checkIn, setCheckIn] = useState("");
-  const [checkOut, setCheckOut] = useState("");
-  const roomName = JSON.stringify(useCartStore((state) => state.cart));
+  const { cart, clearCart } = useCartStore();
+  const notify = () => {
+    toast("Booking completed");
+  };
+
+  const {
+    firstName,
+    lastName,
+    phone,
+    email,
+    numRooms,
+    numGuests,
+    checkIn,
+    checkOut,
+  } = useBookingStore();
+  const {
+    setFirstname,
+    setLastname,
+    setPhone,
+    setEmail,
+    setNumRooms,
+    setNumGuests,
+    setCheckIn,
+    setCheckOut,
+  } = useBookingStore();
+  const roomName = JSON.stringify(cart);
+
+  const data = {
+    firstName,
+    lastName,
+    email,
+    phone,
+    numRooms,
+    numGuests,
+    checkIn,
+    checkOut,
+    roomName,
+  };
+
+  const add = () => {
+    // console.log(data);
+  };
 
   const sendForm = async () => {
-    const formData = {
-      firstName,
-      lastName,
-      email,
-      // phone,
-      // numRooms,
-      // numGuests,
-      checkIn,
-      checkOut,
-      roomName,
-    };
-    console.log(formData);
+    const formData = data;
 
     try {
       const response = await fetch("/api/bookings", {
@@ -44,12 +67,25 @@ const BookingForm = () => {
       }
 
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
     } catch (error) {
       console.error(
         "There was a problem with the fetch operation: " + error.message
       );
     }
+
+    setFirstname("");
+    setLastname("");
+    setEmail("");
+    setPhone("");
+    setNumRooms("");
+    setNumGuests("");
+    setCheckIn("");
+    setCheckOut("");
+
+    clearCart();
+    notify();
+    add();
   };
 
   return (
@@ -72,7 +108,10 @@ const BookingForm = () => {
                     name="firstName"
                     id="firstname"
                     value={firstName}
-                    onChange={(e) => setFirstname(e.target.value)}
+                    onChange={(e) => {
+                      setFirstname(e.target.value);
+                      add();
+                    }}
                     placeholder="First Name"
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
@@ -91,7 +130,10 @@ const BookingForm = () => {
                     name="lastName"
                     id="lastname"
                     value={lastName}
-                    onChange={(e) => setLastname(e.target.value)}
+                    onChange={(e) => {
+                      setLastname(e.target.value);
+                      add();
+                    }}
                     placeholder="Last Name"
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
@@ -113,7 +155,10 @@ const BookingForm = () => {
                     name="numGuests"
                     id="numGuests"
                     value={numGuests}
-                    onChange={(e) => setNumGuests(e.target.value)}
+                    onChange={(e) => {
+                      setNumGuests(e.target.value);
+                      add();
+                    }}
                     placeholder="0"
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
@@ -132,7 +177,10 @@ const BookingForm = () => {
                     name="numRooms"
                     id="numRooms"
                     value={numRooms}
-                    onChange={(e) => setNumRooms(e.target.value)}
+                    onChange={(e) => {
+                      setNumRooms(e.target.value);
+                      add();
+                    }}
                     placeholder="0"
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
@@ -154,7 +202,10 @@ const BookingForm = () => {
                     name="phone"
                     id="phone"
                     value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
+                    onChange={(e) => {
+                      setPhone(e.target.value);
+                      add();
+                    }}
                     placeholder="+263 772 000 000"
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
@@ -173,7 +224,10 @@ const BookingForm = () => {
                     name="email"
                     id="email"
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      add();
+                    }}
                     placeholder="address@email.com"
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
@@ -195,7 +249,10 @@ const BookingForm = () => {
                     name="checkIn"
                     id="checkIn"
                     value={checkIn}
-                    onChange={(e) => setCheckIn(e.target.value)}
+                    onChange={(e) => {
+                      setCheckIn(e.target.value);
+                      add();
+                    }}
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
                 </div>
@@ -213,7 +270,10 @@ const BookingForm = () => {
                     name="checkOut"
                     id="checkOut"
                     value={checkOut}
-                    onChange={(e) => setCheckOut(e.target.value)}
+                    onChange={(e) => {
+                      setCheckOut(e.target.value);
+                      add();
+                    }}
                     className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                   />
                 </div>

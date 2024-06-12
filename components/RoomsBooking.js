@@ -5,7 +5,7 @@ import Title from "./Title";
 import BookingList from "./BookingList";
 
 function RoomsBooking({ context }) {
-  const { loading, sortedRooms, rooms } = context;
+  const { loading, sortedRooms } = context;
   if (loading) {
     return <Loading />;
   }

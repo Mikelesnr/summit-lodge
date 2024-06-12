@@ -1,23 +1,17 @@
 "use client";
 import { useState } from "react";
 import Title from "./Title";
-
-// const send = async () => {
-//   "use server";
-//   await sendMail({
-//     from: ContactForm.email,
-//     name: name,
-//     subject: subject,
-//     body: `<p>${message}</p>`,
-//     // compileWelcomeTemplate("Vahid", "youtube.com/@sakuradev"),
-//   });
-// };
+import { toast } from "react-toastify";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+
+  const notify = () => {
+    toast("Email sent");
+  };
 
   async function sendForm() {
     let item = { name, email, subject, message };
@@ -31,12 +25,13 @@ const ContactForm = () => {
         Accept: "application/json",
       },
     });
+    console.log(result.status);
     result = await result.json();
-    console.log(result.message);
     setName("");
     setSubject("");
     setEmail("");
     setMessage("");
+    notify();
   }
 
   return (
