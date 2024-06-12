@@ -7,7 +7,7 @@ import axios from "axios";
 
 export default function RoomBook({ room }) {
   const { name, slug, images, price } = room;
-  const removeFromCart = useCartStore((state) => state.removeFromCart);
+  // const removeFromCart = useCartStore((state) => state.removeFromCart);
   const addToCart = useCartStore((state) => state.addToCart);
   const addToBookingCart = useCartStore((state) => state.addToBookingCart);
   const { bookingCart, cart } = useCartStore();
