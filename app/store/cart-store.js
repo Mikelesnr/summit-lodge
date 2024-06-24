@@ -12,6 +12,10 @@ export const useCartStore = create((set) => ({
     set((state) => ({
       cart: state.cart.filter((room) => room.name !== roomName),
     })),
+  removeFromBookingCart: (roomName) =>
+    set((state) => ({
+      bookingCart: state.bookingCart.filter((room) => room !== roomName),
+    })),
   clearCart: () => set((state) => ({ cart: [] })),
   clearBookingCart: () => set((state) => ({ bookingCart: [] })),
   setCheckIn: (into) => set((state) => ({ email: into })),

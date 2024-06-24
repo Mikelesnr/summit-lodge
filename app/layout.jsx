@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { RoomProvider } from "../assets/context";
+import "bootstrap/dist/css/bootstrap.css";
 
 export const metadata = {
   title: "summit lodge",
