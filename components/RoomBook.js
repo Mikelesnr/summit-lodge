@@ -21,35 +21,24 @@ export default function RoomBook({ room }) {
 
   const add = () => {
     addToCart({ name, price });
-    addToBookingCart(name);
-    console.log(checkIn, checkOut, cart, bookingCart, bookedRooms);
+    console.log(checkIn, checkOut, cart, bookedRooms);
   };
 
   return (
     <>
-      {bookingCart.includes(name) ? (
-        <></>
-      ) : (
-        <>
-          <article className="room">
-            <div className="img-container">
-              cart <Image src={images[0] || defaultImg} alt="single room" />
-              <div className="price-top">
-                <h6>${price}</h6>
-                <p>per night</p>
-              </div>
-              <button
-                type="button"
-                onClick={add}
-                className="btn-primary room-link"
-              >
-                Add
-              </button>
-            </div>
-            <p className="room-info">{name}</p>
-          </article>
-        </>
-      )}
+      <article className="room">
+        <div className="img-container">
+          cart <Image src={images[0] || defaultImg} alt="single room" />
+          <div className="price-top">
+            <h6>${price}</h6>
+            <p>per night</p>
+          </div>
+          <button type="button" onClick={add} className="btn-primary room-link">
+            Add
+          </button>
+        </div>
+        <p className="room-info">{name}</p>
+      </article>
     </>
   );
 }

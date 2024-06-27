@@ -46,3 +46,23 @@ export async function GET(req) {
     return NextResponse.json({ error: "Error getting bookings", status: 500 });
   }
 }
+
+export async function DELETE(req) {
+  try {
+    const urlParams = new URLSearchParams(req.url.split("?")[1]);
+    const id = urlParams.get("id"); // Assuming the ID is passed as a query parameter
+
+    await prisma.booking.delete({
+      where: {
+        id: id, // Keep the ID as a string
+      },
+    });
+
+    return NextResponse.json({
+      message: `Booking deleted successfully`,
+    });
+  } catch (error) {
+    console.error("Error deleting booking:", error);
+    return NextResponse.json({ error: "Internal server error", status: 500 });
+  }
+}
