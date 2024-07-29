@@ -47,11 +47,16 @@ const BookingForm = () => {
     roomName,
   };
 
+  const bookingMessage = () => {
+    console.log(cart);
+  };
+
   const add = () => {
     // console.log(data);
   };
 
   const sendForm = async () => {
+    bookingMessage();
     const formData = data;
 
     try {
@@ -175,6 +180,7 @@ const BookingForm = () => {
                   </label>
                   <input
                     type="number"
+                    min={Math.ceil(numGuests / 2)}
                     name="numRooms"
                     id="numRooms"
                     value={numRooms}
@@ -247,6 +253,7 @@ const BookingForm = () => {
                   </label>
                   <input
                     type="date"
+                    min={new Date().toISOString().split("T")[0]}
                     name="checkIn"
                     id="checkIn"
                     value={checkIn}
@@ -268,6 +275,7 @@ const BookingForm = () => {
                   </label>
                   <input
                     type="date"
+                    min={checkIn.split("T")[0]}
                     name="checkOut"
                     id="checkOut"
                     value={checkOut}

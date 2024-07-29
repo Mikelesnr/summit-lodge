@@ -1,14 +1,15 @@
+import ceomain from "./images/ceo/ceo-main.jpeg";
 import ceohead from "./images/ceo/ceo-main.jpeg";
 import ceobed from "./images/ceo/ceo-bed.jpeg";
 import ceoshower from "./images/ceo/ceo-shower2.jpeg";
 import ceotoilet from "./images/ceo/ceo-toilet.jpeg";
 import ceotv from "./images/ceo/ceo-tv.jpeg";
-import ministerialmain from "./images/ministerial/ministerial-main.jpeg";
-import ministerialtv from "./images/ministerial/ministerial-tv.jpeg";
-import ministerialbed from "./images/ministerial/ministerial-bed.jpeg";
+import ministerialmain from "./images/ministerial-50/ministerial-main.jpeg";
+import ministerialtv from "./images/ministerial-50/ministerial-tv.jpeg";
+import ministerialbed from "./images/ministerial-50/ministrial-bed.jpeg";
 import ministerialwide from "./images/ministerial/ministerial-wide.jpeg";
 import ministerialshower from "./images/ministerial/ministerial-shower.jpeg";
-import ministerialtoilet from "./images/ministerial/ministerial-toilet.jpeg";
+import ministerialtoilet from "./images/ministerial-50/minsterial-toilet.jpeg";
 import kingmain from "./images/king/king-main.jpeg";
 import kingtv from "./images/king/king-tv.jpeg";
 import kingbed from "./images/king/king-bed.jpeg";
@@ -34,62 +35,6 @@ import signaturewide from "./images/signature/signature-wide.jpeg";
 import signaturefull from "./images/signature/signature-full.jpeg";
 import signaturetoilet from "./images/signature/signature-toilet.jpeg";
 export default [
-  {
-    sys: {
-      id: "1",
-    },
-    fields: {
-      name: "ceo",
-      slug: "ceo",
-      type: "single",
-      price: 60,
-      size: 200,
-      capacity: 1,
-      pets: false,
-      breakfast: false,
-      featured: true,
-      description:
-        "The room comes with a full Dstv package, high speed Wi-Fi, a queen-sized bed, a 50-inch tv, pressurized hot water, porcelain tiled floors, access room service for all meals, self-service tea facilities and air-conditioning. ",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Comfortable beds",
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: ceohead,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: ceobed,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: ceotv,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: ceoshower,
-            },
-          },
-        },
-      ],
-    },
-  },
   {
     sys: {
       id: "2",
@@ -140,6 +85,62 @@ export default [
           fields: {
             file: {
               url: ministerialtv,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "1",
+    },
+    fields: {
+      name: "ceo",
+      slug: "ceo",
+      type: "single",
+      price: 60,
+      size: 200,
+      capacity: 1,
+      pets: false,
+      breakfast: false,
+      featured: true,
+      description:
+        "The room comes with a full Dstv package, high speed Wi-Fi, a queen-sized bed, a 50-inch tv, pressurized hot water, porcelain tiled floors, access room service for all meals, self-service tea facilities and air-conditioning. ",
+      extras: [
+        "Plush pillows and breathable bed linens",
+        "Soft, oversized bath towels",
+        "Full-sized, pH-balanced toiletries",
+        "Complimentary refreshments",
+        "Adequate safety/security",
+        "Comfortable beds",
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: ceohead,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: ceobed,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: ceotv,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: ceoshower,
             },
           },
         },
@@ -321,6 +322,62 @@ export default [
     fields: {
       name: "signature",
       slug: "signature",
+      type: "double",
+      price: 70,
+      size: 350,
+      capacity: 2,
+      pets: false,
+      breakfast: false,
+      featured: true,
+      description:
+        "The room comes with a full Dstv package, high speed Wi-Fi, a king-sized bed, a 65-inch tv, pressurized hot water, porcelain tiled floors, access room service for all meals, self-service tea facilities, two executive seaters and air-conditioning. ",
+      extras: [
+        "Plush pillows and breathable bed linens",
+        "Soft, oversized bath towels",
+        "Full-sized, pH-balanced toiletries",
+        "Complimentary refreshments",
+        "Adequate safety/security",
+        "Comfortable beds",
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: signaturemain,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: signaturebed,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: signaturetv,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: signaturetoilet,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "6",
+    },
+    fields: {
+      name: "monarch",
+      slug: "monarch",
       type: "double",
       price: 100,
       size: 350,

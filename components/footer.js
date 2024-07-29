@@ -54,13 +54,22 @@ const Footer = () => {
                     +263 718 267 984
                   </a>
                 </li>
-                <li className="mb-4">
+                <li className="mb-4 bigMail">
                   <a
                     href="mailto:summitguestlodge@gmail.com"
                     className="hover:underline"
                     target="_blank"
                   >
                     summitguestlodge@gmail.com
+                  </a>
+                </li>
+                <li className="mb-4 tinyMail">
+                  <a
+                    href="mailto:summitguestlodge @gmail.com"
+                    className="hover:underline"
+                    target="_blank"
+                  >
+                    summitguestlodge @gmail.com
                   </a>
                 </li>
                 <li className="mb-4">

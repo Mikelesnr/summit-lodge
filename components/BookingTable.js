@@ -23,11 +23,7 @@ const BookingTable = () => {
 
   const deleteBooking = async (bookingId) => {
     try {
-      await axios
-        .delete(`/api/bookings?id=${bookingId}`)
-        .then(function (response) {
-          console.log(response.data);
-        });
+      await axios.delete(`/api/bookings?id=${bookingId}`);
       setDeletedBookingId(bookingId);
       // Remove the deleted booking from the local state (optional)
       setBookings((prevBookings) =>
@@ -39,10 +35,12 @@ const BookingTable = () => {
     }
   };
 
+  const today = new Date().toISOString().split("T")[0];
+
   return (
     <>
-      <br></br>
-      <Title title="Booked rooms"></Title>
+      <br />
+      <Title title="Booked rooms" />
       <div className="table">
         <table className="table table-striped">
           <thead className="thead-dark">
@@ -57,26 +55,32 @@ const BookingTable = () => {
             </tr>
           </thead>
           <tbody>
-            {bookings.map((booking) => (
-              <tr key={booking.id}>
-                <td>{booking.firstName}</td>
-                <td>{booking.lastName}</td>
-                <td>{booking.room}</td>
-                <td>{booking.email}</td>
-                <td>{booking.checkIn}</td>
-                <td>{booking.checkOut}</td>
-                <td>
-                  {/* Add your delete button logic here */}
-                  {/* For example: */}
-                  <button
-                    className="btn btn-danger"
-                    onClick={() => deleteBooking(booking.id)}
-                  >
-                    Delete
-                  </button>
-                </td>
-              </tr>
-            ))}
+            {bookings.map((booking) => {
+              const isCheckOutValid = booking.checkOut >= today;
+              if (isCheckOutValid) {
+                return (
+                  <tr key={booking.id}>
+                    <td>{booking.firstName}</td>
+                    <td>{booking.lastName}</td>
+                    <td>{booking.room}</td>
+                    <td>{booking.email}</td>
+                    <td>{booking.checkIn}</td>
+                    <td>{booking.checkOut}</td>
+                    <td>
+                      {/* Add your delete button logic here */}
+                      {/* For example: */}
+                      <button
+                        className="btn btn-danger"
+                        onClick={() => deleteBooking(booking.id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                );
+              }
+              return null; // Skip rendering if checkOut is invalid
+            })}
           </tbody>
         </table>
       </div>
