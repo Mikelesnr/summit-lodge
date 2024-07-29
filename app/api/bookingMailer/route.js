@@ -7,11 +7,11 @@ export async function POST(request) {
     await sendMail({
       from: form.email,
       subject: form.subject,
-      body: `<h3>Name: ${form.name}</h3>
+      body: `<h3>Suject: ${form.subject}</h3>
+      <h3>Booking for: ${form.firstName} ${form.lastName}</h3>
       <h3>Email: ${form.email}</h3>
-      <h3>Subject: ${form.subject}</h3>
-      <p>Message: ${form.message}</p>`,
-      whoSend: "user",
+      <h3>Invoice </h3>
+      <p>${form.message}</p>`,
     });
     return NextResponse.json({
       status: "Email sent",

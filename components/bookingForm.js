@@ -13,6 +13,10 @@ const BookingForm = () => {
     toast("Booking completed");
   };
 
+  const emailFail = () => {
+    toast("Please Double check email");
+  };
+
   const {
     firstName,
     lastName,
@@ -48,15 +52,60 @@ const BookingForm = () => {
   };
 
   const bookingMessage = () => {
-    console.log(cart);
+    let message = "";
+    let total = 0;
+    cart.map((room) => {
+      message = message + `<p>${room.name}: ${room.price}</p>`;
+      total = total + room.price;
+    });
+    message = message + `<p><strong>total</strong>: ${total}</p>`;
+    return message;
   };
 
   const add = () => {
     // console.log(data);
   };
 
+  const sendBookingForm = async () => {
+    try {
+      const subject = "Booking At Summit guesthouse";
+      const message = bookingMessage();
+      let item = { firstName, lastName, email, subject, message };
+
+      //Fetching user registration api
+      let result = await fetch("/api/bookingMailer", {
+        method: "POST",
+        body: JSON.stringify(item),
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
+      console.log(result.status);
+      result = await result.json();
+
+      sendForm();
+
+      setFirstname("");
+      setLastname("");
+      setEmail("");
+      setPhone("");
+      setNumRooms("");
+      setNumGuests("");
+      setCheckIn("");
+      setCheckOut("");
+
+      clearCart();
+      notify();
+    } catch (error) {
+      console.error(
+        "There was a problem with the fetch operation: " + error.message
+      );
+      emailFail();
+    }
+  };
+
   const sendForm = async () => {
-    bookingMessage();
     const formData = data;
 
     try {
@@ -78,20 +127,8 @@ const BookingForm = () => {
       console.error(
         "There was a problem with the fetch operation: " + error.message
       );
+      notify;
     }
-
-    setFirstname("");
-    setLastname("");
-    setEmail("");
-    setPhone("");
-    setNumRooms("");
-    setNumGuests("");
-    setCheckIn("");
-    setCheckOut("");
-
-    clearCart();
-    notify();
-    add();
   };
 
   return (
@@ -297,7 +334,7 @@ const BookingForm = () => {
               <Cart></Cart>
               <button
                 type="submit"
-                formAction={sendForm}
+                formAction={sendBookingForm}
                 data-te-ripple-init
                 data-te-ripple-color="light"
                 className="btn-form mb-6 inline-block w-full rounded px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
