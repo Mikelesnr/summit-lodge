@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { useCartStore } from "../app/store/cart-store";
 import { useBookingStore } from "../app/store/booking-store";
 import Cart from "./cart";
+import { getDaysBetweenDates, addOneDay } from "../assets/constants";
 
 const BookingForm = () => {
   const { cart, clearCart } = useCartStore();
@@ -51,14 +52,25 @@ const BookingForm = () => {
     roomName,
   };
 
+  const modDate = addOneDay(checkIn);
+
   const bookingMessage = () => {
     let message = "";
     let total = 0;
+    let days = getDaysBetweenDates(checkIn, checkOut);
+    let fullTotal = 0;
     cart.map((room) => {
       message = message + `<p>${room.name}: ${room.price}</p>`;
       total = total + room.price;
     });
-    message = message + `<p><strong>total</strong>: ${total}</p>`;
+    fullTotal = total * days;
+    if (days > 1) {
+      message = message + `<p><strong>total per night</strong>: ${total}</p>`;
+    }
+    const subtext = days > 1 ? "nights" : "night";
+    message =
+      message +
+      `<p><strong>total for ${days} ${subtext}</strong>: ${fullTotal}</p>`;
     return message;
   };
 
@@ -312,7 +324,7 @@ const BookingForm = () => {
                   </label>
                   <input
                     type="date"
-                    min={checkIn.split("T")[0]}
+                    min={modDate.toISOString().split("T")[0]}
                     name="checkOut"
                     id="checkOut"
                     value={checkOut}
