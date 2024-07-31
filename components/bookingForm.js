@@ -52,8 +52,6 @@ const BookingForm = () => {
     roomName,
   };
 
-  const modDate = addOneDay(checkIn);
-
   const bookingMessage = () => {
     let message = "";
     let total = 0;
@@ -324,7 +322,7 @@ const BookingForm = () => {
                   </label>
                   <input
                     type="date"
-                    min={modDate.toISOString().split("T")[0]}
+                    min={addOneDay(checkIn).split("T")[0]}
                     name="checkOut"
                     id="checkOut"
                     value={checkOut}
