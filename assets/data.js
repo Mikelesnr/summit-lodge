@@ -1,43 +1,43 @@
-import ceomain from "./images/ceo/ceo-main.jpeg";
-import ceohead from "./images/ceo/ceo-main.jpeg";
-import ceobed from "./images/ceo/ceo-bed.jpeg";
-import ceoshower from "./images/ceo/ceo-shower2.jpeg";
-import ceotoilet from "./images/ceo/ceo-toilet.jpeg";
 import ceotv from "./images/ceo/ceo-tv.jpeg";
 import ministerialmain from "./images/ministerial-50/ministerial-main.jpeg";
 import ministerialtv from "./images/ministerial-50/ministerial-tv.jpeg";
 import ministerialbed from "./images/ministerial-50/ministrial-bed.jpeg";
 import ministerialwide from "./images/ministerial/ministerial-wide.jpeg";
-import ministerialshower from "./images/ministerial/ministerial-shower.jpeg";
+import ministerialfridge from "./images/ministerial-50/ministerial-fridge.jpeg";
 import ministerialtoilet from "./images/ministerial-50/minsterial-toilet.jpeg";
-import kingmain from "./images/king/king-main.jpeg";
-import kingtv from "./images/king/king-tv.jpeg";
-import kingbed from "./images/king/king-bed.jpeg";
+import kingmain from "./images/king-80/king-main.jpeg";
+import kingtv from "./images/king-80/king-tv.jpeg";
+import kingbed from "./images/king-80/king-bed.jpeg";
 import kingwide from "./images/king/king-wide.jpeg";
 import kingshower from "./images/king/king-shower.jpeg";
-import kingtoilet from "./images/king/king-toilet.jpeg";
+import kingtoilet from "./images/king-80/king-toilet.jpeg";
 import queenshower from "./images/queen/queen-shower.jpeg";
-import queentv from "./images/queen/queen-tv.jpeg";
+import queentv from "./images/queen-60/queen-tv.jpeg";
 import queenbed from "./images/queen/queen-bed.jpeg";
-import queenwide from "./images/queen/queen-wide.jpeg";
-import queenfull from "./images/queen/queen-full.jpeg";
-import queentoilet from "./images/queen/queen -toilet.jpeg";
-import presidentialmain from "./images/presidential/presidential-main.jpeg";
-import presidentialtv from "./images/presidential/presidential-tv.jpeg";
-import presidentialbed from "./images/presidential/presidential-bed.jpeg";
-import presidentialwide from "./images/presidential/presidential-wide.jpeg";
-import presidentialfull from "./images/presidential/presidential-full.jpeg";
-import presidentialtoilet from "./images/presidential/presidential-toilet.jpeg";
-import signaturemain from "./images/signature/signature-main.jpeg";
-import signaturetv from "./images/signature/signature-tv.jpeg";
+import queenmain from "./images/queen-60/queen-main.jpeg";
+import queenbathroom from "./images/queen-60/queen-bathroom.jpeg";
+import queentoilet from "./images/queen-60/queen-toilet.jpeg";
+import presidentialmain from "./images/presidential-70/presidential-main.jpeg";
+import presidentialtv from "./images/presidential-70/presidential-tv.jpeg";
+import presidentialbed from "./images/presidential-70/presidential-bed.jpeg";
+import presidentialwide from "./images/presidential-70/presidential-wide.jpeg";
+import presidentialfull from "./images/presidential-70/presidential-full.jpeg";
+import presidentialtoilet from "./images/presidential-70/presidential-toilet.jpeg";
+import signaturemain from "./images/signature-70/signature-main.jpeg";
+import signaturetv from "./images/signature-70/signature-tv.jpeg";
+import signaturefridge from "./images/signature-70/signature-fridge.jpeg";
 import signaturebed from "./images/signature/signature-bed.jpeg";
 import signaturewide from "./images/signature/signature-wide.jpeg";
 import signaturefull from "./images/signature/signature-full.jpeg";
-import signaturetoilet from "./images/signature/signature-toilet.jpeg";
+import signaturetoilet from "./images/signature-70/signature-toilet.jpeg";
+import monarchmain from "./images/monarch-100/monarch-main.jpeg";
+import monarchtv from "./images/monarch-100/monarch-tv.jpeg";
+import monarchbed from "./images/monarch-100/monarch-bed.jpeg";
+import monarchtoilet from "./images/monarch-100/monarch-toilet.jpeg";
 export default [
   {
     sys: {
-      id: "2",
+      id: "1",
     },
     fields: {
       name: "ministerial",
@@ -63,14 +63,14 @@ export default [
         {
           fields: {
             file: {
-              url: ministerialmain,
+              url: ministerialbed,
             },
           },
         },
         {
           fields: {
             file: {
-              url: ministerialbed,
+              url: ministerialfridge,
             },
           },
         },
@@ -93,20 +93,20 @@ export default [
   },
   {
     sys: {
-      id: "1",
+      id: "2",
     },
     fields: {
-      name: "ceo",
-      slug: "ceo",
-      type: "single",
+      name: "queen",
+      slug: "queen",
+      type: "double",
       price: 60,
-      size: 200,
-      capacity: 1,
+      size: 300,
+      capacity: 2,
       pets: false,
       breakfast: false,
-      featured: true,
+      featured: false,
       description:
-        "The room comes with a full Dstv package, high speed Wi-Fi, a queen-sized bed, a 50-inch tv, pressurized hot water, porcelain tiled floors, access room service for all meals, self-service tea facilities and air-conditioning. ",
+        "The room comes with a full Dstv package, high speed Wi-Fi, a queen-sized bed, a 50-inch tv, pressurized hot water, porcelain tiled floors, access room service for all meals, self-service tea facilities and air-conditioning",
       extras: [
         "Plush pillows and breathable bed linens",
         "Soft, oversized bath towels",
@@ -119,28 +119,28 @@ export default [
         {
           fields: {
             file: {
-              url: ceohead,
+              url: queenmain,
             },
           },
         },
         {
           fields: {
             file: {
-              url: ceobed,
+              url: queenbathroom,
             },
           },
         },
         {
           fields: {
             file: {
-              url: ceotv,
+              url: queentv,
             },
           },
         },
         {
           fields: {
             file: {
-              url: ceoshower,
+              url: queentoilet,
             },
           },
         },
@@ -155,12 +155,12 @@ export default [
       name: "presidential",
       slug: "presidential",
       type: "single",
-      price: 80,
+      price: 70,
       size: 300,
       capacity: 1,
       pets: false,
       breakfast: false,
-      featured: true,
+      featured: false,
       description:
         "The room comes with a full Dstv package, high speed Wi-Fi, a king-sized bed, a 60-inch tv, pressurized hot water, porcelain tiled floors, access room service for all meals, self-service tea facilities, two executive seaters and air-conditioning. ",
       extras: [
@@ -189,7 +189,7 @@ export default [
         {
           fields: {
             file: {
-              url: presidentialfull,
+              url: presidentialtv,
             },
           },
         },
@@ -208,6 +208,62 @@ export default [
       id: "4",
     },
     fields: {
+      name: "signature",
+      slug: "signature",
+      type: "double",
+      price: 70,
+      size: 350,
+      capacity: 2,
+      pets: false,
+      breakfast: false,
+      featured: true,
+      description:
+        "The room comes with a full Dstv package, high speed Wi-Fi, a king-sized bed, a 65-inch tv, pressurized hot water, porcelain tiled floors, access room service for all meals, self-service tea facilities, two executive seaters and air-conditioning. ",
+      extras: [
+        "Plush pillows and breathable bed linens",
+        "Soft, oversized bath towels",
+        "Full-sized, pH-balanced toiletries",
+        "Complimentary refreshments",
+        "Adequate safety/security",
+        "Comfortable beds",
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: signaturemain,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: signaturefridge,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: signaturetv,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: signaturetoilet,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "5",
+    },
+    fields: {
       name: "king",
       slug: "king",
       type: "single",
@@ -216,7 +272,7 @@ export default [
       capacity: 1,
       pets: false,
       breakfast: true,
-      featured: false,
+      featured: true,
       description:
         "The room comes with a full Dstv package, high speed Wi-Fi, a king-sized bed, a 60-inch tv, pressurized hot water, porcelain tiled floors, access room service for all meals, self-service tea facilities and air-conditioning.",
       extras: [
@@ -252,119 +308,7 @@ export default [
         {
           fields: {
             file: {
-              url: kingshower,
-            },
-          },
-        },
-      ],
-    },
-  },
-  {
-    sys: {
-      id: "5",
-    },
-    fields: {
-      name: "queen",
-      slug: "queen",
-      type: "double",
-      price: 60,
-      size: 300,
-      capacity: 2,
-      pets: false,
-      breakfast: false,
-      featured: false,
-      description:
-        "The room comes with a full Dstv package, high speed Wi-Fi, a queen-sized bed, a 50-inch tv, pressurized hot water, porcelain tiled floors, access room service for all meals, self-service tea facilities and air-conditioning",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Comfortable beds",
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: queenfull,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: queenbed,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: queentv,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: queentoilet,
-            },
-          },
-        },
-      ],
-    },
-  },
-  {
-    sys: {
-      id: "6",
-    },
-    fields: {
-      name: "signature",
-      slug: "signature",
-      type: "double",
-      price: 70,
-      size: 350,
-      capacity: 2,
-      pets: false,
-      breakfast: false,
-      featured: true,
-      description:
-        "The room comes with a full Dstv package, high speed Wi-Fi, a king-sized bed, a 65-inch tv, pressurized hot water, porcelain tiled floors, access room service for all meals, self-service tea facilities, two executive seaters and air-conditioning. ",
-      extras: [
-        "Plush pillows and breathable bed linens",
-        "Soft, oversized bath towels",
-        "Full-sized, pH-balanced toiletries",
-        "Complimentary refreshments",
-        "Adequate safety/security",
-        "Comfortable beds",
-      ],
-      images: [
-        {
-          fields: {
-            file: {
-              url: signaturemain,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: signaturebed,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: signaturetv,
-            },
-          },
-        },
-        {
-          fields: {
-            file: {
-              url: signaturetoilet,
+              url: kingtoilet,
             },
           },
         },
@@ -399,431 +343,32 @@ export default [
         {
           fields: {
             file: {
-              url: signaturemain,
+              url: monarchmain,
             },
           },
         },
         {
           fields: {
             file: {
-              url: signaturebed,
+              url: monarchbed,
             },
           },
         },
         {
           fields: {
             file: {
-              url: signaturetv,
+              url: monarchtv,
             },
           },
         },
         {
           fields: {
             file: {
-              url: signaturetoilet,
+              url: monarchtoilet,
             },
           },
         },
       ],
     },
   },
-  // {
-  //   sys: {
-  //     id: "7",
-  //   },
-  //   fields: {
-  //     name: "double standard",
-  //     slug: "double-standard",
-  //     type: "double",
-  //     price: 300,
-  //     size: 400,
-  //     capacity: 2,
-  //     pets: true,
-  //     breakfast: false,
-  //     featured: false,
-  //     description:
-  //       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-  //     extras: [
-  //       "Plush pillows and breathable bed linens",
-  //       "Soft, oversized bath towels",
-  //       "Full-sized, pH-balanced toiletries",
-  //       "Complimentary refreshments",
-  //       "Adequate safety/security",
-  //       "Internet",
-  //       "Comfortable beds",
-  //     ],
-  //     images: [
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: img7,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room2,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room3,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room4,
-  //           },
-  //         },
-  //       },
-  //     ],
-  //   },
-  // },
-  // {
-  //   sys: {
-  //     id: "8",
-  //   },
-  //   fields: {
-  //     name: "double deluxe",
-  //     slug: "double-deluxe",
-  //     type: "double",
-  //     price: 400,
-  //     size: 500,
-  //     capacity: 2,
-  //     pets: true,
-  //     breakfast: true,
-  //     featured: true,
-  //     description:
-  //       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-  //     extras: [
-  //       "Plush pillows and breathable bed linens",
-  //       "Soft, oversized bath towels",
-  //       "Full-sized, pH-balanced toiletries",
-  //       "Complimentary refreshments",
-  //       "Adequate safety/security",
-  //       "Internet",
-  //       "Comfortable beds",
-  //     ],
-  //     images: [
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: img8,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room2,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room3,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room4,
-  //           },
-  //         },
-  //       },
-  //     ],
-  //   },
-  // },
-  // {
-  //   sys: {
-  //     id: "9",
-  //   },
-  //   fields: {
-  //     name: "family economy",
-  //     slug: "family-economy",
-  //     type: "family",
-  //     price: 300,
-  //     size: 500,
-  //     capacity: 3,
-  //     pets: false,
-  //     breakfast: false,
-  //     featured: false,
-  //     description:
-  //       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-  //     extras: [
-  //       "Plush pillows and breathable bed linens",
-  //       "Soft, oversized bath towels",
-  //       "Full-sized, pH-balanced toiletries",
-  //       "Complimentary refreshments",
-  //       "Adequate safety/security",
-  //       "Internet",
-  //       "Comfortable beds",
-  //     ],
-  //     images: [
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: img9,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room2,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room3,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room4,
-  //           },
-  //         },
-  //       },
-  //     ],
-  //   },
-  // },
-  // {
-  //   sys: {
-  //     id: "10",
-  //   },
-  //   fields: {
-  //     name: "family basic",
-  //     slug: "family-basic",
-  //     type: "family",
-  //     price: 350,
-  //     size: 550,
-  //     capacity: 4,
-  //     pets: false,
-  //     breakfast: false,
-  //     featured: false,
-  //     description:
-  //       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-  //     extras: [
-  //       "Plush pillows and breathable bed linens",
-  //       "Soft, oversized bath towels",
-  //       "Full-sized, pH-balanced toiletries",
-  //       "Complimentary refreshments",
-  //       "Adequate safety/security",
-  //       "Internet",
-  //       "Comfortable beds",
-  //     ],
-  //     images: [
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: img10,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room2,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room3,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room4,
-  //           },
-  //         },
-  //       },
-  //     ],
-  //   },
-  // },
-  // {
-  //   sys: {
-  //     id: "11",
-  //   },
-  //   fields: {
-  //     name: "family standard",
-  //     slug: "family-standard",
-  //     type: "family",
-  //     price: 400,
-  //     size: 600,
-  //     capacity: 5,
-  //     pets: true,
-  //     breakfast: false,
-  //     featured: false,
-  //     description:
-  //       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-  //     extras: [
-  //       "Plush pillows and breathable bed linens",
-  //       "Soft, oversized bath towels",
-  //       "Full-sized, pH-balanced toiletries",
-  //       "Complimentary refreshments",
-  //       "Adequate safety/security",
-  //       "Internet",
-  //       "Comfortable beds",
-  //     ],
-  //     images: [
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: img11,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room2,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room3,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room4,
-  //           },
-  //         },
-  //       },
-  //     ],
-  //   },
-  // },
-  // {
-  //   sys: {
-  //     id: "12",
-  //   },
-  //   fields: {
-  //     name: "family deluxe",
-  //     slug: "family-deluxe",
-  //     type: "family",
-  //     price: 500,
-  //     size: 700,
-  //     capacity: 6,
-  //     pets: true,
-  //     breakfast: true,
-  //     featured: true,
-  //     description:
-  //       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-  //     extras: [
-  //       "Plush pillows and breathable bed linens",
-  //       "Soft, oversized bath towels",
-  //       "Full-sized, pH-balanced toiletries",
-  //       "Complimentary refreshments",
-  //       "Adequate safety/security",
-  //       "Internet",
-  //       "Comfortable beds",
-  //     ],
-  //     images: [
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: img12,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room2,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room3,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room4,
-  //           },
-  //         },
-  //       },
-  //     ],
-  //   },
-  // },
-  // {
-  //   sys: {
-  //     id: "13",
-  //   },
-  //   fields: {
-  //     name: "presidential",
-  //     slug: "presidential-room",
-  //     type: "presidential",
-  //     price: 600,
-  //     size: 1000,
-  //     capacity: 10,
-  //     pets: true,
-  //     breakfast: true,
-  //     featured: true,
-  //     description:
-  //       "Street art edison bulb gluten-free, tofu try-hard lumbersexual brooklyn tattooed pickled chambray. Actually humblebrag next level, deep v art party wolf tofu direct trade readymade sustainable hell of banjo. Organic authentic subway tile cliche palo santo, street art XOXO dreamcatcher retro sriracha portland air plant kitsch stumptown. Austin small batch squid gastropub. Pabst pug tumblr gochujang offal retro cloud bread bushwick semiotics before they sold out sartorial literally mlkshk. Vaporware hashtag vice, sartorial before they sold out pok pok health goth trust fund cray.",
-  //     extras: [
-  //       "Plush pillows and breathable bed linens",
-  //       "Soft, oversized bath towels",
-  //       "Full-sized, pH-balanced toiletries",
-  //       "Complimentary refreshments",
-  //       "Adequate safety/security",
-  //       "Internet",
-  //       "Comfortable beds",
-  //     ],
-  //     images: [
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room1,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room2,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room3,
-  //           },
-  //         },
-  //       },
-  //       {
-  //         fields: {
-  //           file: {
-  //             url: room4,
-  //           },
-  //         },
-  //       },
-  //     ],
-  //   },
-  // },
 ];
