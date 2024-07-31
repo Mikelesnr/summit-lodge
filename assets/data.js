@@ -1,39 +1,33 @@
 import ceotv from "./images/ceo/ceo-tv.jpeg";
-import ministerialmain from "./images/ministerial-50/ministerial-main.jpeg";
-import ministerialtv from "./images/ministerial-50/ministerial-tv.jpeg";
-import ministerialbed from "./images/ministerial-50/ministrial-bed.jpeg";
-import ministerialwide from "./images/ministerial/ministerial-wide.jpeg";
-import ministerialfridge from "./images/ministerial-50/ministerial-fridge.jpeg";
-import ministerialtoilet from "./images/ministerial-50/minsterial-toilet.jpeg";
-import kingmain from "./images/king-80/king-main.jpeg";
-import kingtv from "./images/king-80/king-tv.jpeg";
-import kingbed from "./images/king-80/king-bed.jpeg";
-import kingwide from "./images/king/king-wide.jpeg";
-import kingshower from "./images/king/king-shower.jpeg";
-import kingtoilet from "./images/king-80/king-toilet.jpeg";
-import queenshower from "./images/queen/queen-shower.jpeg";
-import queentv from "./images/queen-60/queen-tv.jpeg";
+import ministerialmain from "./images/ministerial/ministerial-main.jpeg";
+import ministerialtv from "./images/ministerial/ministerial-tv.jpeg";
+import ministerialbed from "./images/ministerial/ministrial-bed.jpeg";
+import ministerialfridge from "./images/ministerial/ministerial-fridge.jpeg";
+import ministerialtoilet from "./images/ministerial/minsterial-toilet.jpeg";
+import kingmain from "./images/king/king-main.jpeg";
+import kingtv from "./images/king/king-tv.jpeg";
+import kingbed from "./images/king/king-bed.jpeg";
+import kingtoilet from "./images/king/king-toilet.jpeg";
+import queentv from "./images/queen/queen-tv.jpeg";
 import queenbed from "./images/queen/queen-bed.jpeg";
-import queenmain from "./images/queen-60/queen-main.jpeg";
-import queenbathroom from "./images/queen-60/queen-bathroom.jpeg";
-import queentoilet from "./images/queen-60/queen-toilet.jpeg";
-import presidentialmain from "./images/presidential-70/presidential-main.jpeg";
-import presidentialtv from "./images/presidential-70/presidential-tv.jpeg";
-import presidentialbed from "./images/presidential-70/presidential-bed.jpeg";
-import presidentialwide from "./images/presidential-70/presidential-wide.jpeg";
-import presidentialfull from "./images/presidential-70/presidential-full.jpeg";
-import presidentialtoilet from "./images/presidential-70/presidential-toilet.jpeg";
-import signaturemain from "./images/signature-70/signature-main.jpeg";
-import signaturetv from "./images/signature-70/signature-tv.jpeg";
-import signaturefridge from "./images/signature-70/signature-fridge.jpeg";
+import queenmain from "./images/queen/queen-main.jpeg";
+import queenbathroom from "./images/queen/queen-bathroom.jpeg";
+import queentoilet from "./images/queen/queen-toilet.jpeg";
+import presidentialmain from "./images/presidential/presidential-main.jpeg";
+import presidentialtv from "./images/presidential/presidential-tv.jpeg";
+import presidentialbed from "./images/presidential/presidential-bed.jpeg";
+import presidentialwide from "./images/presidential/presidential-wide.jpeg";
+import presidentialfull from "./images/presidential/presidential-full.jpeg";
+import presidentialtoilet from "./images/presidential/presidential-toilet.jpeg";
+import signaturemain from "./images/signature/signature-main.jpeg";
+import signaturetv from "./images/signature/signature-tv.jpeg";
+import signaturefridge from "./images/signature/signature-fridge.jpeg";
 import signaturebed from "./images/signature/signature-bed.jpeg";
-import signaturewide from "./images/signature/signature-wide.jpeg";
-import signaturefull from "./images/signature/signature-full.jpeg";
-import signaturetoilet from "./images/signature-70/signature-toilet.jpeg";
-import monarchmain from "./images/monarch-100/monarch-main.jpeg";
-import monarchtv from "./images/monarch-100/monarch-tv.jpeg";
-import monarchbed from "./images/monarch-100/monarch-bed.jpeg";
-import monarchtoilet from "./images/monarch-100/monarch-toilet.jpeg";
+import signaturetoilet from "./images/signature/signature-toilet.jpeg";
+import monarchmain from "./images/monarch/monarch-main.jpeg";
+import monarchtv from "./images/monarch/monarch-tv.jpeg";
+import monarchbed from "./images/monarch/monarch-bed.jpeg";
+import monarchtoilet from "./images/monarch/monarch-toilet.jpeg";
 export default [
   {
     sys: {
@@ -272,7 +266,7 @@ export default [
       capacity: 1,
       pets: false,
       breakfast: true,
-      featured: true,
+      featured: false,
       description:
         "The room comes with a full Dstv package, high speed Wi-Fi, a king-sized bed, a 60-inch tv, pressurized hot water, porcelain tiled floors, access room service for all meals, self-service tea facilities and air-conditioning.",
       extras: [

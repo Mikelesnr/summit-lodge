@@ -28,9 +28,11 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1" />
   <path
+      clipRule="evenodd"
      d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3"
      id="path2" />
   <path
+      clipRule="evenodd"
      d="M8 12h8"
      id="path4" />
 </svg>

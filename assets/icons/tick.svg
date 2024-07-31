@@ -8,5 +8,5 @@
    <sodipodi:namedview id="namedview6" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
       inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0"
       inkscape:deskcolor="#d1d1d1" />
-   <path d="M20 6L9 17l-5-5" id="path2" />
+   <path clipRule="evenodd" d="M20 6L9 17l-5-5" id="path2" />
 </svg>

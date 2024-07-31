@@ -5,8 +5,9 @@ import Banner from "../../../components/Banner";
 import Link from "next/link";
 import Image from "next/image";
 import { RoomContext } from "../../../assets/context";
-import Hero from "../../../components/Hero";
-// import StyledHero from "@components/StyledHero";
+// import Hero from "../../../components/Hero";
+import StyledHero from "../../../components/StyledHero";
+
 export default class SingleRoom extends Component {
   constructor(props) {
     super(props);
@@ -18,7 +19,7 @@ export default class SingleRoom extends Component {
   static contextType = RoomContext;
   render() {
     const { getRoom } = this.context;
-    console.log(typeof this.state.slug);
+    // console.log(typeof this.state.slug);
     const room = getRoom(this.state.slug);
     // const room = true;
 
@@ -47,15 +48,15 @@ export default class SingleRoom extends Component {
       <>
         {/* Style hero is used so that we can use dynamic bakground for each
         single room */}
-        {/* <StyledHero img={images[0] || this.state.defaultBcg}> */}
-        <Hero>
+        <StyledHero img={images[0] || this.state.defaultBcg}>
+          {/* <Hero> */}
           <Banner title={`${name} room`}>
             <Link href="/rooms" className="btn-primary">
               Back to rooms
             </Link>
           </Banner>
-        </Hero>
-        {/* </StyledHero> */}
+          {/* </Hero> */}
+        </StyledHero>
         <section className="single-room">
           <div className="single-room-images">
             {images.map((image, index) => {
