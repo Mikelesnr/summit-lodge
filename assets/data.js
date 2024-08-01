@@ -266,7 +266,7 @@ export default [
       capacity: 1,
       pets: false,
       breakfast: true,
-      featured: false,
+      featured: true,
       description:
         "The room comes with a full Dstv package, high speed Wi-Fi, a king-sized bed, a 60-inch tv, pressurized hot water, porcelain tiled floors, access room service for all meals, self-service tea facilities and air-conditioning.",
       extras: [

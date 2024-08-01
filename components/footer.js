@@ -1,3 +1,5 @@
+import { FaBeer, FaEnvelope, FaFacebook, FaPhone } from "react-icons/fa";
+
 const Footer = () => {
   return (
     <div>
@@ -42,7 +44,10 @@ const Footer = () => {
                     className="hover:underline"
                     target="_blank"
                   >
-                    +263 780 652 983
+                    <div className="icon-text-container">
+                      <FaPhone />
+                      <span className="px-2">+263 780 652 983</span>
+                    </div>
                   </a>
                 </li>
                 <li className="mb-4">
@@ -51,25 +56,22 @@ const Footer = () => {
                     className="hover:underline"
                     target="_blank"
                   >
-                    +263 718 267 984
+                    <div className="icon-text-container">
+                      <FaPhone />
+                      <span className="px-2"> +263 718 267 984</span>
+                    </div>
                   </a>
                 </li>
-                <li className="mb-4 bigMail">
+                <li className="mb-4">
                   <a
                     href="mailto:summitguestlodge@gmail.com"
                     className="hover:underline"
                     target="_blank"
                   >
-                    summitguestlodge@gmail.com
-                  </a>
-                </li>
-                <li className="mb-4 tinyMail">
-                  <a
-                    href="mailto:summitguestlodge @gmail.com"
-                    className="hover:underline"
-                    target="_blank"
-                  >
-                    summitguestlodge @gmail.com
+                    <div className="icon-text-container">
+                      <FaEnvelope />
+                      <span className="px-2"> Email</span>
+                    </div>
                   </a>
                 </li>
                 <li className="mb-4">
@@ -78,7 +80,10 @@ const Footer = () => {
                     className="hover:underline"
                     target="_blank"
                   >
-                    Facebook
+                    <div className="icon-text-container">
+                      <FaFacebook />
+                      <span className="px-2"> Facebook</span>
+                    </div>
                   </a>
                 </li>
               </ul>

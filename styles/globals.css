@@ -202,7 +202,13 @@ h6 {
 .defaultHero,
 .roomsHero,
 .bookHero,
-.contactHero {
+.contactHero,
+.ministerialHero,
+.queenHero,
+.presidentialHero,
+.signatureHero,
+.kingHero,
+.monarchHero {
   min-height: calc(80vh - 66px);
   background: url("../assets/images/home-bg.jpeg") center/cover no-repeat;
   display: flex;
@@ -212,6 +218,36 @@ h6 {
 
 .roomsHero {
   background-image: url("../assets/images/rooms-bg.jpeg");
+  min-height: 60vh;
+}
+
+.ministerialHero {
+  background-image: url("../assets/images/ministerial/ministerial-full.jpeg");
+  min-height: 60vh;
+}
+
+.queenHero {
+  background-image: url("../assets/images/queen/queen-full.jpeg");
+  min-height: 60vh;
+}
+
+.presidentialHero {
+  background-image: url("../assets/images/presidential/presidential-main.jpeg");
+  min-height: 60vh;
+}
+
+.signatureHero {
+  background-image: url("../assets/images/signature/signature-full.jpeg");
+  min-height: 60vh;
+}
+
+.kingHero {
+  background-image: url("../assets/images/king/king-full.jpeg");
+  min-height: 60vh;
+}
+
+.monarchHero {
+  background-image: url("../assets/images/monarch/monarch-full.jpeg");
   min-height: 60vh;
 }
 
@@ -699,14 +735,49 @@ h6 {
   text-align: center;
 }
 
+.no-wrap {
+  text-wrap: nowrap !important;
+}
 /* For screens up to 767px wide: */
-@media only screen and (min-width: 767px) {
+@media only screen and (max-width: 800px) {
+  nav-links {
+    text-align: center;
+  }
+  .nav-center {
+    text-align: center;
+    width: 100% !important;
+    padding: 0 auto !important;
+    margin: 0 auto;
+  }
+
+  .defaultHero,
+  .bookHero,
+  .contactHero {
+    max-height: 250px !important;
+  }
+
+  .banner {
+    margin-top: 0%;
+    z-index: 0;
+    max-height: 200px !important;
+  }
+
+  .banner h1 {
+    display: none;
+    margin-top: 5px !important;
+    padding-top: 5px !important;
+    max-height: 100px;
+  }
+}
+
+/* For screens biger than 1200px wide: */
+@media only screen and (min-width: 1200px) {
   .tinyMail {
     display: none;
   }
 }
-/* For screens up to 767px wide: */
-@media only screen and (max-width: 767px) {
+/* For screens up to 1200px wide: */
+@media only screen and (max-width: 1200px) {
   .bigMail {
     display: none;
   }
@@ -767,4 +838,19 @@ h6 {
   width: 80%;
   margin: 30px auto;
 }
+
 /* end reviews */
+
+@media (max-width: 1500px) {
+  /* Your CSS rules for screens less than 100px wide */
+  .sm-hide {
+    display: none !important;
+  }
+}
+
+/* // CSS (or styled-components): */
+.icon-text-container {
+  display: flex;
+  align-items: center;
+  /* Add other styling as needed */
+}
