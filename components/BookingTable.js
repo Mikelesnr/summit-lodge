@@ -62,7 +62,7 @@ const BookingTable = () => {
                   <tr key={booking.id}>
                     <td>{booking.firstName}</td>
                     <td>{booking.lastName}</td>
-                    <td>{booking.room}</td>
+                    <td>{booking.roomName}</td>
                     <td>{booking.email}</td>
                     <td>{booking.checkIn}</td>
                     <td>{booking.checkOut}</td>
