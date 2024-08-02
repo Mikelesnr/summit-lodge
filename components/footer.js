@@ -1,4 +1,20 @@
-import { FaBeer, FaEnvelope, FaFacebook, FaPhone } from "react-icons/fa";
+import {
+  FaAudioDescription,
+  FaBed,
+  FaBeer,
+  FaBookOpen,
+  FaEnvelope,
+  FaFacebook,
+  FaHeadphones,
+  FaHeadset,
+  FaHome,
+  FaInbox,
+  FaMapMarked,
+  FaPhone,
+  FaRegUser,
+  FaRobot,
+  FaTelegram,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -95,22 +111,34 @@ const Footer = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="/" className="hover:underline">
-                    Home
+                    <div className="icon-text-container">
+                      <FaHome />
+                      <span className="px-2">Home</span>
+                    </div>
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="/rooms" className="hover:underline">
-                    Rooms
+                    <div className="icon-text-container">
+                      <FaBed />
+                      <span className="px-2">Rooms</span>
+                    </div>
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="/book" className="hover:underline">
-                    Book
+                    <div className="icon-text-container">
+                      <FaBookOpen />
+                      <span className="px-2">Book</span>
+                    </div>
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="/contacts" className="hover:underline">
-                    Contact Us
+                    <div className="icon-text-container">
+                      <FaTelegram />
+                      <span className="px-2">Contact Us</span>
+                    </div>
                   </a>
                 </li>
               </ul>
@@ -122,17 +150,26 @@ const Footer = () => {
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    Guest Feedback
+                    <div className="icon-text-container">
+                      <FaRegUser />
+                      <span className="px-2">Guest Feedback</span>
+                    </div>
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="#" className="hover:underline">
-                    Guest Support
+                    <div className="icon-text-container">
+                      <FaHeadset />
+                      <span className="px-2">Guest Support</span>
+                    </div>
                   </a>
                 </li>
                 <li className="mb-4">
                   <a href="/location" className="hover:underline">
-                    map location
+                    <div className="icon-text-container">
+                      <FaMapMarked />
+                      <span className="px-2">map location</span>
+                    </div>
                   </a>
                 </li>
                 {/* <li className="mb-4">

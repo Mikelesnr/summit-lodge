@@ -58,17 +58,17 @@ const BookingForm = () => {
     let days = getDaysBetweenDates(checkIn, checkOut);
     let fullTotal = 0;
     cart.map((room) => {
-      message = message + `<p>${room.name}: ${room.price}</p>`;
+      message = message + `<p>${room.name}: $${room.price}</p>`;
       total = total + room.price;
     });
     fullTotal = total * days;
     if (days > 1) {
-      message = message + `<p><strong>total per night</strong>: ${total}</p>`;
+      message = message + `<p><strong>total per night</strong>: $${total}</p>`;
     }
     const subtext = days > 1 ? "nights" : "night";
     message =
       message +
-      `<p><strong>total for ${days} ${subtext}</strong>: ${fullTotal}</p>`;
+      `<p><strong>total for ${days} ${subtext}</strong>: $${fullTotal}</p>`;
     return message;
   };
 

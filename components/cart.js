@@ -65,7 +65,7 @@ function Cart() {
           {cart.map((item) => (
             <tr key={item.id} className="row">
               <td className="col-4">{item.name}</td>
-              <td className="col-4">{item.price}</td>
+              <td className="col-4">${item.price}</td>
               <td className="col-4">
                 <Button
                   variant="primary"
@@ -81,7 +81,7 @@ function Cart() {
             <td className="col-4">
               Total for {nights} {night_string}:
             </td>
-            <td className="col-4">{calculateTotal()}</td>
+            <td className="col-4">${calculateTotal()}</td>
             <td className="col-4"></td>
           </tr>
         </Modal.Body>
