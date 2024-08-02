@@ -149,7 +149,10 @@ const Footer = () => {
               </h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a
+                    href="mailto:summitguestlodge@gmail.com"
+                    className="hover:underline"
+                  >
                     <div className="icon-text-container">
                       <FaRegUser />
                       <span className="px-2">Guest Feedback</span>
@@ -157,7 +160,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a
+                    href="tel:+263718267984"
+                    className="hover:underline"
+                    target="_blank"
+                  >
                     <div className="icon-text-container">
                       <FaHeadset />
                       <span className="px-2">Guest Support</span>
@@ -165,18 +172,17 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a href="/location" className="hover:underline">
+                  <a
+                    href="https://maps.app.goo.gl/BURFindXjKLScrza6"
+                    className="hover:underline"
+                    target="black"
+                  >
                     <div className="icon-text-container">
                       <FaMapMarked />
                       <span className="px-2">map location</span>
                     </div>
                   </a>
                 </li>
-                {/* <li className="mb-4">
-                  <a href="#" className="hover:underline">
-                    MacOS
-                  </a>
-                </li> */}
               </ul>
             </div>
           </div>
