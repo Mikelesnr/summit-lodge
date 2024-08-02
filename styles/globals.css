@@ -669,7 +669,16 @@ h6 {
 
 @media screen and (max-width: 776px) {
   .single-room-images img {
-    align-self: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 90% !important;
+    text-align: center;
+    padding: 0%;
+  }
+  .single-room-images {
+    max-width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
   }
 }
 
@@ -811,6 +820,9 @@ h6 {
 @media only screen and (max-width: 600px) {
   .map {
     height: 300px;
+  }
+  .min-hide {
+    display: none;
   }
 }
 
