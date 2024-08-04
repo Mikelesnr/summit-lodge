@@ -43,6 +43,7 @@ function Cart() {
   const handleRemove = (name) => {
     removeFromCart(name);
     removeFromBookingCart(name);
+    toast(`${name} removed`);
   };
 
   return (

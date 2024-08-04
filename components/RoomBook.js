@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useCartStore } from "../app/store/cart-store";
 import { useBookingStore } from "../app/store/booking-store";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 export default function RoomBook({ room }) {
   const { name, slug, images, price } = room;
@@ -21,7 +22,7 @@ export default function RoomBook({ room }) {
 
   const add = () => {
     addToCart({ name, price });
-    console.log(checkIn, checkOut, cart, bookedRooms);
+    toast(`${name} added`);
   };
 
   return (
