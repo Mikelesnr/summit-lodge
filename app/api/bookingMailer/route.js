@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 
 export async function POST(request) {
   let form = await request.json();
+  const { BANK, ACCOUNT_TYPE, ACCOUNT_NO } = process.env;
   try {
     await sendMail({
       from: form.email,
@@ -11,7 +12,11 @@ export async function POST(request) {
       <h3>Booking for: ${form.firstName} ${form.lastName}</h3>
       <h3>Email: ${form.email}</h3>
       <h3>Invoice </h3>
-      <p>${form.message}</p>`,
+      <p>${form.message}</p>
+      <h3>Payment details</h3>
+      <p>Bank Name: ${BANK}</p>
+      <p>Account Type: ${ACCOUNT_TYPE}</p>
+      <p>Account Number: ${ACCOUNT_NO} </p>`,
     });
     return NextResponse.json({
       status: "Email sent",
