@@ -1,5 +1,6 @@
 import { sendMail } from "../../../lib/mail";
 import { NextResponse } from "next/server";
+import { EmailTemplate } from "../../../assets/emailTemplate";
 
 export async function POST(request) {
   let form = await request.json();
@@ -8,15 +9,15 @@ export async function POST(request) {
     await sendMail({
       from: form.email,
       subject: form.subject,
-      body: `<h3>Suject: ${form.subject}</h3>
-      <h3>Booking for: ${form.firstName} ${form.lastName}</h3>
-      <h3>Email: ${form.email}</h3>
-      <h3>Invoice </h3>
-      <p>${form.message}</p>
-      <h3>Payment details</h3>
-      <p>Bank Name: ${BANK}</p>
-      <p>Account Type: ${ACCOUNT_TYPE}</p>
-      <p>Account Number: ${ACCOUNT_NO} </p>`,
+      body: EmailTemplate(
+        form.firstName,
+        form.lastName,
+        form.email,
+        form.message,
+        BANK,
+        ACCOUNT_TYPE,
+        ACCOUNT_NO
+      ),
     });
     return NextResponse.json({
       status: "Email sent",
