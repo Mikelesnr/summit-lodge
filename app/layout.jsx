@@ -7,8 +7,12 @@ import { RoomProvider } from "../assets/context";
 import "bootstrap/dist/css/bootstrap.css";
 
 export const metadata = {
-  title: "summit lodge",
-  description: "bnb website",
+  title: "Summit Guesthouse",
+  description:
+    "Summit Guest house,687 Baobab Road Beitbridge Zimbabwe. Plan an Unforgettable Experience in Summit Guesthouse today",
+  icons: {
+    icon: "/favicon.ico",
+  },
 };
 
 const RootLayout = ({ children }) => {
