@@ -17,7 +17,7 @@ const NavBar = () => {
           <Link href="/" className="nav-icon flex gap-2 felx-center">
             <Image
               src="/summit-guesthouse-high-resolution-logo-transparent.png"
-              alt="Summit Logo"
+              alt="website Logo"
               width={220}
               height={60}
               className="object-contain"

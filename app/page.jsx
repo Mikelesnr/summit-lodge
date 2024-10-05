@@ -15,7 +15,7 @@ export default function Home() {
           title={
             <Image
               src="/summit.png"
-              alt="Summit Logo"
+              alt="Website Logo"
               width={330}
               height={80}
               className="object-contain"
