@@ -29,7 +29,7 @@ export default function RoomBook({ room }) {
     <>
       <article className="room">
         <div className="img-container">
-          cart <Image src={images[0] || defaultImg} alt="single room" />
+          <Image src={images[0] || defaultImg} alt="single room" />
           <div className="price-top">
             <h6>${price}</h6>
             <p>per night</p>
