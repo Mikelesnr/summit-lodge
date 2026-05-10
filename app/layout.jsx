@@ -13,6 +13,12 @@ export const metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+  keywords: [
+    "Beitbridge BnB",
+    "Beitbridge lodge",
+    "guesthouse Beitbridge",
+    "overnight accommodation",
+  ],
 };
 
 const RootLayout = ({ children }) => {
