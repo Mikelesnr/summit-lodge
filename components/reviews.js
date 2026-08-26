@@ -63,7 +63,7 @@ export default function Reviews() {
                   alt="Summit Logo"
                   width={330}
                   height={80}
-                  classNameName="object-contain"
+                  className="object-contain"
                 />
               </div>
               <div className="p-6">
@@ -95,7 +95,7 @@ export default function Reviews() {
                   alt="Summit Logo"
                   width={"fill"}
                   height={"fill"}
-                  classNameName="object-contain"
+                  className="object-contain"
                 />
               </div>
               <div className="p-6">
@@ -131,7 +131,7 @@ export default function Reviews() {
                   alt="Summit Logo"
                   width={330}
                   height={80}
-                  classNameName="object-contain"
+                  className="object-contain"
                 />
               </div>
               <div className="p-6">
@@ -166,7 +166,7 @@ export default function Reviews() {
                   alt="Summit Logo"
                   width={330}
                   height={80}
-                  classNameName="object-contain"
+                  className="object-contain"
                 />
               </div>
               <div className="p-6">
