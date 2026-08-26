@@ -13,7 +13,7 @@ export async function POST(request) {
       form.message,
       BANK,
       ACCOUNT_TYPE,
-      ACCOUNT_NO
+      ACCOUNT_NO,
     );
 
     // Send the booking confirmation to the guest
@@ -36,7 +36,7 @@ export async function POST(request) {
           BANK,
           ACCOUNT_TYPE,
           ACCOUNT_NO,
-          { heading: "New Booking", showPaymentDetails: false }
+          { heading: "New Booking", showPaymentDetails: false },
         );
 
         await sendMail({
@@ -45,10 +45,7 @@ export async function POST(request) {
           body: staffBody,
         });
       } catch (adminError) {
-        console.error(
-          "Failed to send admin booking notification:",
-          adminError
-        );
+        console.error("Failed to send admin booking notification:", adminError);
       }
     }
 
