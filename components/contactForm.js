@@ -39,8 +39,7 @@ const ContactForm = () => {
           <div className="mb-5">
             <label
               for="name"
-              className="mb-3 block text-base font-medium text-[#07074D]"
-            >
+              className="mb-3 block text-base font-medium text-[#07074D]">
               Full Name
             </label>
             <input
@@ -56,8 +55,7 @@ const ContactForm = () => {
           <div className="mb-5">
             <label
               for="email"
-              className="mb-3 block text-base font-medium text-[#07074D]"
-            >
+              className="mb-3 block text-base font-medium text-[#07074D]">
               Email Address
             </label>
             <input
@@ -73,8 +71,7 @@ const ContactForm = () => {
           <div className="mb-5">
             <label
               for="subject"
-              className="mb-3 block text-base font-medium text-[#07074D]"
-            >
+              className="mb-3 block text-base font-medium text-[#07074D]">
               Subject
             </label>
             <input
@@ -90,8 +87,7 @@ const ContactForm = () => {
           <div className="mb-5">
             <label
               for="message"
-              className="mb-3 block text-base font-medium text-[#07074D]"
-            >
+              className="mb-3 block text-base font-medium text-[#07074D]">
               Message
             </label>
             <textarea
@@ -101,15 +97,13 @@ const ContactForm = () => {
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Type your message"
-              className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
-            ></textarea>
+              className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"></textarea>
           </div>
           <div>
             <button
               type="submit"
               disabled={!name || !message}
-              className="btn-form mb-6 inline-flex w-full items-center justify-center gap-2 rounded px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] disabled:cursor-not-allowed disabled:opacity-50 dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
-            >
+              className="btn-form mb-6 inline-flex w-full items-center justify-center gap-2 rounded px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] disabled:cursor-not-allowed disabled:opacity-50 dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]">
               <FaWhatsapp size={16} />
               Message us on WhatsApp
             </button>
