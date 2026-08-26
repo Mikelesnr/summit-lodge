@@ -1,7 +1,10 @@
 "use client";
 import { useState } from "react";
 import Title from "./Title";
-import { toast } from "react-toastify";
+import { FaWhatsapp } from "react-icons/fa";
+
+// WhatsApp number in international format, no "+", no leading 0.
+const WHATSAPP_NUMBER = "263718267984";
 
 const ContactForm = () => {
   const [name, setName] = useState("");
@@ -9,38 +12,29 @@ const ContactForm = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const notify = () => {
-    toast("Email sent");
-  };
+  function sendToWhatsapp(e) {
+    e.preventDefault();
 
-  async function sendForm() {
-    let item = { name, email, subject, message };
+    const lines = [
+      "Hello Summit Guest House,",
+      "",
+      `Name: ${name}`,
+      email ? `Email: ${email}` : null,
+      subject ? `Subject: ${subject}` : null,
+      "",
+      message,
+    ].filter((line) => line !== null);
 
-    //Fetching user registration api
-    let result = await fetch("/api/mailer", {
-      method: "POST",
-      body: JSON.stringify(item),
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
-    console.log(result.status);
-    result = await result.json();
-    setName("");
-    setSubject("");
-    setEmail("");
-    setMessage("");
-    notify();
+    const text = encodeURIComponent(lines.join("\n"));
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${text}`;
+
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 
   return (
     <div className="flex items-center justify-center p-12">
       <div className="mx-auto w-full max-w-[550px]">
-        <form
-          action="https://formbold.com/s/FORM_ID"
-          // onSubmit={sendForm.bind(this)}
-        >
+        <form onSubmit={sendToWhatsapp}>
           <Title title="Contact Us" />
           <div className="mb-5">
             <label
@@ -112,11 +106,12 @@ const ContactForm = () => {
           </div>
           <div>
             <button
-              // disabled={!name || !email || !subject || !message}
-              formAction={sendForm}
-              className="btn-form mb-6 inline-block w-full rounded px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
+              type="submit"
+              disabled={!name || !message}
+              className="btn-form mb-6 inline-flex w-full items-center justify-center gap-2 rounded px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] disabled:cursor-not-allowed disabled:opacity-50 dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
             >
-              Submit
+              <FaWhatsapp size={16} />
+              Message us on WhatsApp
             </button>
           </div>
         </form>
