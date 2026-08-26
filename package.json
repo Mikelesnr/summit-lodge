@@ -15,7 +15,6 @@
     "axios": "^1.6.8",
     "bcrypt": "^5.1.1",
     "bootstrap": "^5.3.3",
-    "client": "^0.0.1",
     "contentful": "^10.6.12",
     "formidable": "^3.5.1",
     "googleapis": "^171.4.0",
@@ -35,6 +34,7 @@
     "react-toastify": "^10.0.5",
     "sharp": "^0.34.5",
     "styled-components": "^5.2.0",
+    "winston": "^3.19.0",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
