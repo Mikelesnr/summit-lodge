@@ -5,8 +5,20 @@ export function EmailTemplate(
   message,
   bank,
   account,
-  acoount_no
+  acoount_no,
+  options = {}
 ) {
+  const { heading = "Booking Confirmation", showPaymentDetails = true } =
+    options;
+
+  const paymentDetailsBlock = showPaymentDetails
+    ? `
+    <h3 style="color: #af9a7d;">Payment details</h3>
+    <p style="color: #af9a7d;">Bank Name: ${bank}</p>
+    <p style="color: #af9a7d;">Account Type: ${account}</p>
+    <p style="color: #af9a7d;">Account Number: ${acoount_no}</p>`
+    : "";
+
   return `<body style="background-color: #af9a7d; display: grid; align-items: center">
   <div
     style="
@@ -32,15 +44,11 @@ export function EmailTemplate(
       alt=""
       style="max-width: 90%"
     />
-    <h1 style="text-align: center">Booking Confirmation</h1>
+    <h1 style="text-align: center">${heading}</h1>
     <h3>Booking for: ${firstName} ${lastName}</h3>
     <h3>Email: ${email}</h3>
     <h3>Invoice</h3>
-    <p>${message}</p>
-    <h3 style="color: #af9a7d;">Payment details</h3>
-    <p style="color: #af9a7d;">Bank Name: ${bank}</p>
-    <p style="color: #af9a7d;">Account Type: ${account}</p>
-    <p style="color: #af9a7d;">Account Number: ${acoount_no}</p>
+    <p>${message}</p>${paymentDetailsBlock}
     <br />
     <br />
   </div>
